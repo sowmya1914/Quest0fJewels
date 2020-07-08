@@ -116,6 +116,23 @@ public class ScoreSystemControl : MonoBehaviour
             }
         }
     }
+
+    public void TryAddToHighScore()
+    {
+        if(PlayerPrefs.HasKey("leaderboard"))
+        {
+            int previousRun = PlayerPrefs.GetInt("leaderboard");
+            if(totalRunScore > previousRun)
+            {
+                PlayerPrefs.SetInt("leaderboard", totalRunScore);
+            }
+        }
+        else
+        {
+            PlayerPrefs.SetInt("leaderboard", totalRunScore);
+        }
+    }
+
     private void Update()
     {
         if(inStartMenu == false)
