@@ -18,6 +18,8 @@ namespace Gamekit2D
         protected Coroutine m_SpawnTimerCoroutine;
         protected WaitForSeconds m_SpawnWait;
 
+        private PlayerCharacter thePlayer;
+        private bool inRange = false;
         void OnEnable()
         {
             PersistentDataManager.RegisterPersister(this);
@@ -36,15 +38,50 @@ namespace Gamekit2D
                 pool.Add(newEnemy);
             }
 
+            thePlayer = GameObject.FindObjectOfType<PlayerCharacter>();
+            //int spawnCount = Mathf.Min(totalEnemiesToBeSpawned - m_TotalSpawnedEnemyCount, concurrentEnemiesToBeSpawned);
+
+            //for (int i = 0; i < spawnCount; i++)
+            //{
+            //    Pop(transform.position + transform.right * Random.Range(-spawnArea * 0.5f, spawnArea * 0.5f));
+            //}
+
+            //m_CurrentSpawnedEnemyCount = spawnCount;
+            //m_TotalSpawnedEnemyCount += concurrentEnemiesToBeSpawned;
+            m_SpawnWait = new WaitForSeconds(spawnDelay);
+        }
+
+        private void FixedUpdate()
+        {
+            if (thePlayer != null)
+            {
+                float distance = Vector3.Distance(thePlayer.transform.position, transform.position);
+                if (distance < 20.0f)
+                {
+                    if (inRange == false)
+                    {
+                        inRange = true;
+                        SpawnEnemy();
+                    }
+                }
+                else
+                {
+                    inRange = false;
+                }
+
+            }
+        }
+
+        public void SpawnEnemy()
+        {
             int spawnCount = Mathf.Min(totalEnemiesToBeSpawned - m_TotalSpawnedEnemyCount, concurrentEnemiesToBeSpawned);
 
-            for (int i = 0; i < spawnCount; i++)
-            {
-                Pop(transform.position + transform.right * Random.Range(-spawnArea * 0.5f, spawnArea * 0.5f));
-            }
 
-            m_CurrentSpawnedEnemyCount = spawnCount;
-            m_TotalSpawnedEnemyCount += concurrentEnemiesToBeSpawned;
+            Pop(transform.position + transform.right * Random.Range(-spawnArea * 0.5f, spawnArea * 0.5f));
+
+
+            m_CurrentSpawnedEnemyCount++;
+            m_TotalSpawnedEnemyCount += m_CurrentSpawnedEnemyCount;
             m_SpawnWait = new WaitForSeconds(spawnDelay);
         }
 

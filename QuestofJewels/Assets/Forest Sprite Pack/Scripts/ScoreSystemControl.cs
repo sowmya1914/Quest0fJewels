@@ -9,8 +9,8 @@ public class ScoreSystemControl : MonoBehaviour
 {
     private static int levelScore = 0;
     private static int totalRunScore = 0;
-    private static Canvas scoreCanvas = new GameObject().AddComponent<Canvas>();
-    private static Text scoreText = new GameObject().AddComponent<Text>();
+    private static Canvas scoreCanvas = null;
+    private static Text scoreText = null;
     private static bool inStartMenu = true;
     public static ScoreSystemControl Instance
     {
@@ -32,6 +32,12 @@ public class ScoreSystemControl : MonoBehaviour
 
     public static ScoreSystemControl Create()
     {
+        if (scoreCanvas == null)
+            scoreCanvas = new GameObject().AddComponent<Canvas>();
+        if (scoreText == null)
+            scoreText = new GameObject().AddComponent<Text>();
+
+
         GameObject dataManagerGameObject = new GameObject("ScoreSystemControl");
         DontDestroyOnLoad(dataManagerGameObject);
         instance = dataManagerGameObject.AddComponent<ScoreSystemControl>();
@@ -40,7 +46,7 @@ public class ScoreSystemControl : MonoBehaviour
             //set name to easily identify in Unity
             scoreCanvas.name = "Score Canvas";
             scoreText.name = "Score Text";
-            
+
             //Sets this as parent so they are never destroyed between scenes
             scoreCanvas.transform.SetParent(instance.transform);
             scoreCanvas.transform.localScale = Vector3.one;
@@ -66,7 +72,7 @@ public class ScoreSystemControl : MonoBehaviour
             scoreText.rectTransform.anchorMax = new Vector2(0.28f, 0.9f);
             scoreText.rectTransform.anchoredPosition = new Vector2(108f, -4.0f);
             scoreText.rectTransform.sizeDelta = new Vector2(236.0f, -9.0f);
-       
+
             //Check if scene changed, dont want to show score on title screen
             SceneManager.activeSceneChanged += ActiveSceneWasChanged;
         }
@@ -108,9 +114,9 @@ public class ScoreSystemControl : MonoBehaviour
             currentName = "Replaced";
         }
 
-        if(next.name != null)
+        if (next.name != null)
         {
-            if(next.name != "Start")
+            if (next.name != "Start")
             {
                 inStartMenu = false;
             }
@@ -119,10 +125,10 @@ public class ScoreSystemControl : MonoBehaviour
 
     public void TryAddToHighScore()
     {
-        if(PlayerPrefs.HasKey("leaderboard"))
+        if (PlayerPrefs.HasKey("leaderboard"))
         {
             int previousRun = PlayerPrefs.GetInt("leaderboard");
-            if(totalRunScore > previousRun)
+            if (totalRunScore > previousRun)
             {
                 PlayerPrefs.SetInt("leaderboard", totalRunScore);
             }
@@ -135,9 +141,9 @@ public class ScoreSystemControl : MonoBehaviour
 
     private void Update()
     {
-        if(inStartMenu == false)
+        if (inStartMenu == false)
         {
-            if(scoreText != null)
+            if (scoreText != null)
             {
                 scoreText.text = "Score: " + (totalRunScore + levelScore);
             }
