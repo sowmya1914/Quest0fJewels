@@ -20749,10 +20749,14 @@ TilemapRenderer:
   m_ChunkSize: {x: 32, y: 32, z: 32}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_ChunkCullingBounds: {x: 2.7, y: 2.7, z: 0}
 =======
   m_ChunkCullingBounds: {x: 0.03333336, y: 0.03333336, z: 0}
 >>>>>>> c6936305c802ac4c4f87c978be96dad47b001ea7
+=======
+  m_ChunkCullingBounds: {x: 0.13999999, y: 0.13999999, z: 0}
+>>>>>>> parent of c693630... Modified New Scene
 =======
   m_ChunkCullingBounds: {x: 0.13999999, y: 0.13999999, z: 0}
 >>>>>>> parent of c693630... Modified New Scene
