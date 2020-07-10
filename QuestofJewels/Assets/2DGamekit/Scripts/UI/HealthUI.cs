@@ -1,8 +1,11 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Gamekit2D
 {
+    /* ***Old HealthUI***
+    
     public class HealthUI : MonoBehaviour
     {
         public Damageable representedDamageable;
@@ -51,6 +54,32 @@ namespace Gamekit2D
             {
                 m_HealthIconAnimators[i].SetBool(m_HashActivePara, damageable.CurrentHealth >= i + 1);
             }
+        }
+    }
+
+    */
+
+    public class HealthUI : MonoBehaviour
+    {
+        public Damageable player;
+        Slider healthBar;
+
+        void Start()
+        {
+            if (!player)
+            {
+                Debug.LogError("HealthUI Need Player!");
+                return;
+            }
+            healthBar = transform.Find("HealthBar").GetComponent<Slider>();
+            healthBar.maxValue = player.startingHealth;
+            healthBar.value = player.startingHealth;
+        }
+
+        public void UpdateHealth(Damageable damageable)
+        {
+            if(healthBar)
+                healthBar.value = damageable.CurrentHealth;
         }
     }
 }
