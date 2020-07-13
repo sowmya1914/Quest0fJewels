@@ -96,6 +96,11 @@ namespace Gamekit2D
         protected readonly int m_HashDeathPara = Animator.StringToHash("Death");
         protected readonly int m_HashGroundedPara = Animator.StringToHash("Grounded");
 
+        [Header("QoJ")]
+
+        public bool dropItem = false;
+        public GameObject Key;
+
         private void Awake()
         {
             m_CharacterController2D = GetComponent<CharacterController2D>();
@@ -462,6 +467,9 @@ namespace Gamekit2D
             m_Collider.enabled = false;
 
             CameraShaker.Shake(0.15f, 0.3f);
+
+            if (dropItem)
+                DroppingItem();
         }
 
         public void Hit(Damager damager, Damageable damageable)
@@ -527,6 +535,19 @@ namespace Gamekit2D
         public void PlayFootStep()
         {
             footStepAudio.PlayRandomSound();
+        }
+
+        public void SetDropItem(bool b)
+        {
+            dropItem = b;
+        }
+
+        public void DroppingItem()
+        {
+            if (Key != null)
+                Instantiate(Key, transform.position, transform.rotation);
+            else
+                Debug.LogError("Enemy Nothing To Drop!!");
         }
 
 #if UNITY_EDITOR

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace Gamekit2D
 {
@@ -13,6 +14,8 @@ namespace Gamekit2D
 
         protected readonly int m_HashActivePara = Animator.StringToHash("Active");
         protected const float k_KeyIconAnchorWidth = 0.041f;
+
+        public const int MaxJewel = 3;
 
         private void Awake()
         {
@@ -51,6 +54,15 @@ namespace Gamekit2D
             for (int i = 0; i < keyNames.Length; i++)
             {
                 m_KeyIconAnimators[i].SetBool(m_HashActivePara, controller.HasItem(keyNames[i]));
+            }
+        }
+
+        public void AddJewel(InventoryController controller)
+        {
+            int count = controller.GetJewelCount();
+            for (int i = 0; i < MaxJewel; i++)
+            {
+                m_KeyIconAnimators[i].SetBool(m_HashActivePara, count>i? true : false);
             }
         }
     }

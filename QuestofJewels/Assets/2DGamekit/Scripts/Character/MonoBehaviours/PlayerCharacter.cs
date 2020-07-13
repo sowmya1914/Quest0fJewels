@@ -809,5 +809,10 @@ namespace Gamekit2D
         {
             if (KeyUI.Instance != null) KeyUI.Instance.ChangeKeyUI(m_InventoryController);
         }
+
+        public void JewelInventory()
+        {
+            if (KeyUI.Instance != null) KeyUI.Instance.AddJewel(m_InventoryController);
+        }
     }
 }

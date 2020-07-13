@@ -48,6 +48,9 @@ namespace Gamekit2D
 
         HashSet<string> m_InventoryItems = new HashSet<string>();
 
+        //QoJ
+        protected int jewelCount = 0;
+
 
         //Debug function useful in editor during play mode to print in console all objects in that InventoyController
         [ContextMenu("Dump")]
@@ -71,6 +74,13 @@ namespace Gamekit2D
 
         public void AddItem(string key)
         {
+            if(key == "Jewel")
+            {
+                jewelCount++;
+                var ev = GetInventoryEvent(key);
+                if (ev != null) ev.OnAdd.Invoke();
+            }
+            else
             if (!m_InventoryItems.Contains(key))
             {
                 m_InventoryItems.Add(key);
@@ -130,6 +140,11 @@ namespace Gamekit2D
             foreach (var i in inventoryData.value)
                 AddItem(i);
             if (OnInventoryLoaded != null) OnInventoryLoaded();
+        }
+
+        public int GetJewelCount()
+        {
+            return jewelCount;
         }
     }
 }
