@@ -12,6 +12,19 @@ public class ScoreSystemControl : MonoBehaviour
     private static Canvas scoreCanvas = null;
     private static Text scoreText = null;
     private static bool inStartMenu = true;
+
+    public int LEVEL_SCORE
+    {
+        get { return levelScore; }
+        set { levelScore = value; }
+    }
+
+    public int TOTAL_SCORE
+    {
+        get { return totalRunScore; }
+        set { totalRunScore = value; }
+    }
+
     public static ScoreSystemControl Instance
     {
         get
