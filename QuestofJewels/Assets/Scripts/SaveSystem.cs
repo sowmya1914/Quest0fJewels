@@ -137,170 +137,173 @@ public class SaveSystem : MonoBehaviour
         {
 
             string textString = File.ReadAllText(AssetDatabase.GetAssetPath(saveFile));
-            string[] lines = textString.Split('\n');
+            LoadDataFromText(character, textString);
+        }
+        else if (PlayerPrefs.HasKey("SavePlayerFile"))
+        {
+            string textString = PlayerPrefs.GetString("SavePlayerFile");
+           LoadDataFromText(character, textString);
+        }
+    }
 
-            Vector3 newPlayerPosition = character.transform.position;
-            int playerHealth = character.damageable.CurrentHealth;
-            int totalScore = ScoreSystemControl.Instance.TOTAL_SCORE;
-            int currentScore = ScoreSystemControl.Instance.LEVEL_SCORE;
-            PlatformCatcher[] platforms = GameObject.FindObjectsOfType<PlatformCatcher>();
-            Pushable[] pushableBlocks = GameObject.FindObjectsOfType<Pushable>();
-            for (int i = 0; i < lines.Length; i++)
+    private void LoadDataFromText(PlayerCharacter character, string textString)
+    {
+        string[] lines = textString.Split('\n');
+
+        Vector3 newPlayerPosition = character.transform.position;
+        int playerHealth = character.damageable.CurrentHealth;
+        int totalScore = ScoreSystemControl.Instance.TOTAL_SCORE;
+        int currentScore = ScoreSystemControl.Instance.LEVEL_SCORE;
+        PlatformCatcher[] platforms = GameObject.FindObjectsOfType<PlatformCatcher>();
+        Pushable[] pushableBlocks = GameObject.FindObjectsOfType<Pushable>();
+        for (int i = 0; i < lines.Length; i++)
+        {
+            lines[i] = lines[i].Trim();
+            string[] theLine = lines[i].Split(',');
+
+            switch (theLine[0])
             {
-                lines[i] = lines[i].Trim();
-                string[] theLine = lines[i].Split(',');
-
-                switch (theLine[0])
-                {
-                    case "position":
+                case "position":
+                    {
+                        if (theLine.Length >= 4)
                         {
-                            if (theLine.Length >= 4)
-                            {
-                                float floatX = newPlayerPosition.x;
-                                float floatY = newPlayerPosition.y;
-                                float floatZ = newPlayerPosition.z;
-                                Single.TryParse(theLine[1], out floatX);
-                                Single.TryParse(theLine[2], out floatY);
-                                Single.TryParse(theLine[3], out floatZ);
-                                newPlayerPosition = new Vector3(floatX, floatY, floatZ);
-                            }
+                            float floatX = newPlayerPosition.x;
+                            float floatY = newPlayerPosition.y;
+                            float floatZ = newPlayerPosition.z;
+                            Single.TryParse(theLine[1], out floatX);
+                            Single.TryParse(theLine[2], out floatY);
+                            Single.TryParse(theLine[3], out floatZ);
+                            newPlayerPosition = new Vector3(floatX, floatY, floatZ);
                         }
-                        break;
-                    case "platforms":
+                    }
+                    break;
+                case "platforms":
+                    {
+                        if (theLine.Length >= 2)
                         {
-                            if (theLine.Length >= 2)
+                            string[] plats = theLine[1].Split('|');
+
+                            if (plats.Length >= 2)
                             {
-                                string[] plats = theLine[1].Split('|');
-
-                                Debug.Log("I, " + i + " , " + plats.Length);
-                                if (plats.Length >= 2)
+                                for (int j = 1; j < plats.Length; j++)
                                 {
-                                    for (int j = 1; j < plats.Length; j++)
+                                    string somePlat = plats[j];
+                                    string[] platformData = somePlat.Split('!');
+                                    if (platformData.Length >= 4)
                                     {
-                                        string somePlat = plats[j];
-                                        string[] platformData = somePlat.Split('!');
-                                        Debug.Log("J, " + j + " , " + somePlat);
-                                        if (platformData.Length >= 4)
+                                        int someId = 0;
+                                        Int32.TryParse(platformData[0], out someId);
+
+                                        for (int k = 0; k < platforms.Length; k++)
                                         {
-                                            int someId = 0;
-                                            Int32.TryParse(platformData[0], out someId);
 
-                                            for (int k = 0; k < platforms.Length; k++)
+                                            if (platforms[k].GetInstanceID() == someId)
                                             {
+                                                float floatX = 0.0f;
+                                                float floatY = 0.0f;
+                                                float floatZ = 0.0f;
 
-                                                if (platforms[k].GetInstanceID() == someId)
+                                                Single.TryParse(platformData[1], out floatX);
+                                                Single.TryParse(platformData[2], out floatY);
+                                                Single.TryParse(platformData[3], out floatZ);
+                                                platforms[k].platformRigidbody.position = new Vector3(floatX, floatY, floatZ);
+                                                break;
+                                            }
+                                        }
+
+
+                                    }
+                                }
+                            }
+
+
+
+
+                        }
+                    }
+                    break;
+                case "pushables":
+                    {
+                        if (theLine.Length >= 2)
+                        {
+                            string[] blocks = theLine[1].Split('|');
+
+                            if (blocks.Length >= 2)
+                            {
+                                for (int j = 1; j < blocks.Length; j++)
+                                {
+                                    string someBlock = blocks[j];
+                                    string[] blockData = someBlock.Split('!');
+
+                                    if (blockData.Length >= 4)
+                                    {
+                                        int someId = 0;
+                                        Int32.TryParse(blockData[0], out someId);
+
+                                        for (int k = 0; k < pushableBlocks.Length; k++)
+                                        {
+
+                                            if (pushableBlocks[k].GetInstanceID() == someId)
+                                            {
+                                                if (pushableBlocks[k].GetComponent<Rigidbody2D>())
                                                 {
                                                     float floatX = 0.0f;
                                                     float floatY = 0.0f;
                                                     float floatZ = 0.0f;
 
-                                                    Single.TryParse(platformData[1], out floatX);
-                                                    Single.TryParse(platformData[2], out floatY);
-                                                    Single.TryParse(platformData[3], out floatZ);
-                                                    platforms[k].platformRigidbody.position = new Vector3(floatX, floatY, floatZ);
-                                                    break;
+                                                    Single.TryParse(blockData[1], out floatX);
+                                                    Single.TryParse(blockData[2], out floatY);
+                                                    Single.TryParse(blockData[3], out floatZ);
+                                                    pushableBlocks[k].GetComponent<Rigidbody2D>().position = new Vector3(floatX, floatY, floatZ);
                                                 }
+                                                break;
                                             }
-
-
                                         }
+
+
                                     }
                                 }
-
-
-
-
                             }
+
+
+
+
                         }
-                        break;
-                    case "pushables":
+                    }
+                    break;
+                case "health":
+                    {
+                        if (theLine.Length >= 2)
                         {
-                            if (theLine.Length >= 2)
-                            {
-                                string[] blocks = theLine[1].Split('|');
-
-                                Debug.Log("I, " + i + " , " + blocks.Length);
-                                if (blocks.Length >= 2)
-                                {
-                                    for (int j = 1; j < blocks.Length; j++)
-                                    {
-                                        string someBlock = blocks[j];
-                                        string[] blockData = someBlock.Split('!');
-                                        Debug.Log("J, " + j + " , " + someBlock);
-                                        if (blockData.Length >= 4)
-                                        {
-                                            int someId = 0;
-                                            Int32.TryParse(blockData[0], out someId);
-
-                                            for (int k = 0; k < pushableBlocks.Length; k++)
-                                            {
-
-                                                if (pushableBlocks[k].GetInstanceID() == someId)
-                                                {
-                                                    if (pushableBlocks[k].GetComponent<Rigidbody2D>())
-                                                    {
-                                                        float floatX = 0.0f;
-                                                        float floatY = 0.0f;
-                                                        float floatZ = 0.0f;
-
-                                                        Single.TryParse(blockData[1], out floatX);
-                                                        Single.TryParse(blockData[2], out floatY);
-                                                        Single.TryParse(blockData[3], out floatZ);
-                                                        pushableBlocks[k].GetComponent<Rigidbody2D>().position = new Vector3(floatX, floatY, floatZ);
-                                                    }
-                                                    break;
-                                                }
-                                            }
-
-
-                                        }
-                                    }
-                                }
-
-
-
-
-                            }
+                            Int32.TryParse(theLine[1], out playerHealth);
                         }
-                        break;
-                    case "health":
+                    }
+                    break;
+
+                case "totalScore":
+                    {
+                        if (theLine.Length >= 2)
                         {
-                            if (theLine.Length >= 2)
-                            {
-                                Int32.TryParse(theLine[1], out playerHealth);
-                            }
+                            Int32.TryParse(theLine[1], out totalScore);
                         }
-                        break;
+                    }
+                    break;
 
-                    case "totalScore":
+                case "levelScore":
+                    {
+                        if (theLine.Length >= 2)
                         {
-                            if (theLine.Length >= 2)
-                            {
-                                Int32.TryParse(theLine[1], out totalScore);
-                            }
+                            Int32.TryParse(theLine[1], out currentScore);
                         }
-                        break;
+                    }
+                    break;
 
-                    case "levelScore":
-                        {
-                            if (theLine.Length >= 2)
-                            {
-                                Int32.TryParse(theLine[1], out currentScore);
-                            }
-                        }
-                        break;
-
-                }
             }
-
-            character.transform.position = newPlayerPosition;
-            character.damageable.SetHealth(playerHealth);
-            ScoreSystemControl.Instance.TOTAL_SCORE = totalScore;
-            ScoreSystemControl.Instance.LEVEL_SCORE = currentScore;
         }
-        else if (PlayerPrefs.HasKey("SavePlayerFile"))
-        {
 
-        }
+        character.transform.position = newPlayerPosition;
+        character.damageable.SetHealth(playerHealth);
+        ScoreSystemControl.Instance.TOTAL_SCORE = totalScore;
+        ScoreSystemControl.Instance.LEVEL_SCORE = currentScore;
     }
 }

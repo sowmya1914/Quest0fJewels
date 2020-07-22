@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -7,11 +8,16 @@ using UnityEngine.UI;
 
 public class ScoreSystemControl : MonoBehaviour
 {
-    private static int levelScore = 0;
-    private static int totalRunScore = 0;
-    private static Canvas scoreCanvas = null;
-    private static Text scoreText = null;
-    private static bool inStartMenu = true;
+    private int levelScore = 0;
+    private int totalRunScore = 0;
+    [SerializeField]
+    private Canvas scoreCanvas = null;
+    [SerializeField]
+    private Text scoreText = null;
+    [SerializeField]
+    private Image scorePanel = null;
+    [SerializeField]
+    private bool inStartMenu = true;
 
     public int LEVEL_SCORE
     {
@@ -45,46 +51,92 @@ public class ScoreSystemControl : MonoBehaviour
 
     public static ScoreSystemControl Create()
     {
-        if (scoreCanvas == null)
-            scoreCanvas = new GameObject().AddComponent<Canvas>();
-        if (scoreText == null)
-            scoreText = new GameObject().AddComponent<Text>();
+        bool foundInScene = true;
+   
+        instance = GameObject.FindObjectOfType<ScoreSystemControl>();
+        if (instance == null)
+        {
+            GameObject dataManagerGameObject = new GameObject("ScoreSystemControl");
+            DontDestroyOnLoad(dataManagerGameObject);
+            instance = dataManagerGameObject.AddComponent<ScoreSystemControl>();
+            foundInScene = false;
+        }
+        if (instance.scoreCanvas == null)
+        {
+            instance.scoreCanvas = instance.GetComponentInChildren<Canvas>();
+        }
+        if (instance.scorePanel == null)
+        {
+            instance.scorePanel = instance.GetComponentInChildren<Image>();
+        }
 
+        if (instance.scoreText == null)
+        {
+            instance.scoreText = instance.GetComponentInChildren<Text>();
+        }
 
-        GameObject dataManagerGameObject = new GameObject("ScoreSystemControl");
-        DontDestroyOnLoad(dataManagerGameObject);
-        instance = dataManagerGameObject.AddComponent<ScoreSystemControl>();
-        if (scoreCanvas != null && scoreText != null)
+        if (instance.scoreCanvas == null)
+            instance.scoreCanvas = new GameObject().AddComponent<Canvas>();
+        if (instance.scorePanel == null)
+            instance.scorePanel = new GameObject().AddComponent<Image>();
+        if (instance.scoreText == null)
+            instance.scoreText = new GameObject().AddComponent<Text>();
+
+        if (SceneManager.GetActiveScene().name == "Start")
+        {
+            instance.inStartMenu = true;
+        }
+        else
+        {
+            instance.inStartMenu = false;
+        }
+     
+        if (instance.scoreCanvas != null && instance.scoreText != null && foundInScene == false)
         {
             //set name to easily identify in Unity
-            scoreCanvas.name = "Score Canvas";
-            scoreText.name = "Score Text";
+            instance.scoreCanvas.name = "Score Canvas";
+            instance.scorePanel.name = "Score Panel";
+            instance.scoreText.name = "Score Text";
 
             //Sets this as parent so they are never destroyed between scenes
-            scoreCanvas.transform.SetParent(instance.transform);
-            scoreCanvas.transform.localScale = Vector3.one;
-            scoreText.transform.SetParent(scoreCanvas.transform);
-            scoreText.transform.localScale = Vector3.one;
+            instance.scoreCanvas.transform.SetParent(instance.transform);
+            instance.scoreCanvas.transform.localScale = Vector3.one;
+            instance.scorePanel.transform.SetParent(Instance.scoreCanvas.transform);
+            instance.scorePanel.transform.localScale = Vector3.one;
+            instance.scoreText.transform.SetParent(Instance.scoreCanvas.transform);
+            instance.scoreText.transform.localScale = Vector3.one;
 
             //Sets up additional things needed for functionality
-            scoreCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
+            instance.scoreCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
 
-            CanvasScaler scoreCanvasScaler = scoreCanvas.gameObject.AddComponent<CanvasScaler>();
+            CanvasScaler scoreCanvasScaler = instance.scoreCanvas.gameObject.AddComponent<CanvasScaler>();
             scoreCanvasScaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
 
-            GraphicRaycaster raycaster = scoreCanvas.gameObject.AddComponent<GraphicRaycaster>();
+            GraphicRaycaster raycaster = instance.scoreCanvas.gameObject.AddComponent<GraphicRaycaster>();
             Font potentialFont = Resources.GetBuiltinResource<Font>("Arial.ttf");
             if (potentialFont != null)
             {
-                scoreText.font = potentialFont;
+                instance.scoreText.font = potentialFont;
             }
 
-            // set the text position
-            scoreText.resizeTextForBestFit = true;
-            scoreText.rectTransform.anchorMin = new Vector2(0.0125f, 0.7f);
-            scoreText.rectTransform.anchorMax = new Vector2(0.28f, 0.9f);
-            scoreText.rectTransform.anchoredPosition = new Vector2(108f, -4.0f);
-            scoreText.rectTransform.sizeDelta = new Vector2(236.0f, -9.0f);
+            //set colors
+            instance.scorePanel.sprite = AssetDatabase.GetBuiltinExtraResource<Sprite>("UI/Skin/Background.psd");
+            instance.scorePanel.color = new Color(0,0,0, instance.inStartMenu? 0:1);
+            instance.scorePanel.type = Image.Type.Sliced;
+            instance.scoreText.color = Color.white;
+            // set the position
+
+            instance.scoreText.resizeTextForBestFit = true;
+            instance.scoreText.rectTransform.anchorMin = new Vector2(0.0125f, 0.7f);
+            instance.scoreText.rectTransform.anchorMax = new Vector2(0.28f, 0.9f);
+            instance.scoreText.rectTransform.anchoredPosition = new Vector2(108f, -4.0f);
+            instance.scoreText.rectTransform.sizeDelta = new Vector2(236.0f, -9.0f);
+
+            instance.scorePanel.rectTransform.anchorMin = new Vector2(0.0f, 0.0f);
+            instance.scorePanel.rectTransform.anchorMax = new Vector2(1.0f, 1.0f);
+            instance.scorePanel.rectTransform.anchoredPosition = new Vector2(-287.5f, 148.5f);
+            instance.scorePanel.rectTransform.sizeDelta = new Vector2(-575.0f, -403.0f);
+
 
             //Check if scene changed, dont want to show score on title screen
             SceneManager.activeSceneChanged += ActiveSceneWasChanged;
@@ -94,23 +146,23 @@ public class ScoreSystemControl : MonoBehaviour
 
     public static void IncreaseScore(int value)
     {
-        levelScore += value;
+        Instance.levelScore += value;
     }
 
     public static void DecreaseScore(int value)
     {
-        levelScore -= value;
+        Instance.levelScore -= value;
     }
 
     public static void ResetScore()
     {
-        levelScore = 0;
+        Instance.levelScore = 0;
     }
 
     public static void AddTotalScore()
     {
-        totalRunScore += levelScore;
-        levelScore = 0;
+        Instance.totalRunScore += Instance.levelScore;
+        Instance.levelScore = 0;
     }
 
     public void Setup()
@@ -131,7 +183,13 @@ public class ScoreSystemControl : MonoBehaviour
         {
             if (next.name != "Start")
             {
-                inStartMenu = false;
+                Instance.inStartMenu = false;
+                Instance.scorePanel.color = Color.black;
+            }
+            else
+            {
+                Instance.inStartMenu = true;
+                Instance.scorePanel.color = new Color(0,0,0,0);
             }
         }
     }
@@ -151,14 +209,17 @@ public class ScoreSystemControl : MonoBehaviour
             PlayerPrefs.SetInt("leaderboard", totalRunScore);
         }
     }
-
+    private void Start()
+    {
+        Create();
+    }
     private void Update()
     {
-        if (inStartMenu == false)
+        if (Instance.inStartMenu == false)
         {
-            if (scoreText != null)
+            if ( Instance.scoreText != null)
             {
-                scoreText.text = "Score: " + (totalRunScore + levelScore);
+                Instance.scoreText.text = "Score: " + (totalRunScore + levelScore);
             }
         }
     }
