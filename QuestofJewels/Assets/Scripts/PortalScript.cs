@@ -17,6 +17,8 @@ public class PortalScript : MonoBehaviour
     [SerializeField]
     private static bool transitioning = false;
 
+    private Animator m_animator = null;
+    
     public bool IS_PORTAL_OPEN
     {
         get { return isPortalOpen; }
@@ -32,15 +34,26 @@ public class PortalScript : MonoBehaviour
     private void Start()
     {
         thePlayerCharacter = GameObject.FindObjectOfType<PlayerCharacter>();
+        m_animator = GetComponent<Animator>();
+        if (m_animator != null)
+        {
+            m_animator.speed = 0;
+        }
     }
     public void OpenPortal()
     {
-      
+      if(m_animator != null)
+        {
+            m_animator.speed = 1;
+        }
     }
 
     public void ClosePortal()
     {
-
+        if (m_animator != null)
+        {
+            m_animator.speed = 0;
+        }
     }
     private void Awake()
     {

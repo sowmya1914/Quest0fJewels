@@ -53,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/New Scene.unity
     guid: 14732b02b8d06994d8d002c686c22ede
+  - enabled: 1
+    path: Assets/Scenes/Underground.unity
+    guid: 8867d87af84fc5e49b20fde9cf54ea4a
   m_configObjects: {}
