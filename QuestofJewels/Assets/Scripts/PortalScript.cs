@@ -16,9 +16,9 @@ public class PortalScript : MonoBehaviour
     private static Vector3 lastDepositLocation;
     [SerializeField]
     private static bool transitioning = false;
-
+    private SpriteRenderer myRenderer = null;
     private Animator m_animator = null;
-    
+    private static Color transparent = new Color(0,0,0,0);
     public bool IS_PORTAL_OPEN
     {
         get { return isPortalOpen; }
@@ -35,9 +35,14 @@ public class PortalScript : MonoBehaviour
     {
         thePlayerCharacter = GameObject.FindObjectOfType<PlayerCharacter>();
         m_animator = GetComponent<Animator>();
+        myRenderer = GetComponent<SpriteRenderer>();
         if (m_animator != null)
         {
             m_animator.speed = 0;
+        }
+        if(myRenderer != null)
+        {
+            myRenderer.color = transparent;
         }
     }
     public void OpenPortal()
@@ -46,6 +51,11 @@ public class PortalScript : MonoBehaviour
         {
             m_animator.speed = 1;
         }
+
+        if (myRenderer != null)
+        {
+            myRenderer.color = Color.white;
+        }
     }
 
     public void ClosePortal()
@@ -53,6 +63,10 @@ public class PortalScript : MonoBehaviour
         if (m_animator != null)
         {
             m_animator.speed = 0;
+        }
+        if (myRenderer != null)
+        {
+            myRenderer.color = transparent;
         }
     }
     private void Awake()
