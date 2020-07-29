@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 using Gamekit2D;
+using UnityEngine.SceneManagement;
 
 public class GameSettings : MonoBehaviour
 {
@@ -78,18 +79,19 @@ public class GameSettings : MonoBehaviour
     {
 
     }
-
-    public void ExitPause()
+    private void OnGUI()
     {
-        PlayerCharacter.PlayerInstance.Unpause();
+        if (currentkey != null)
+        {
+            Event e = Event.current;
+            if (e.isKey)
+            {
+                ChangeTheKey(currentkey.name, e.keyCode);
+            }
+        }
     }
-
-    public void BackToMain()
-    {
-        Debug.Log("Going to Main");
-        //TODO
-    }
-
+    
+    #region Audio
     public void SetMasterVolume(float volume)
     {
         PlayerPrefs.SetFloat("Master_Vol", volume);
@@ -119,16 +121,6 @@ public class GameSettings : MonoBehaviour
         PlayerPrefs.SetFloat("VO_Vol", volume);
         audioMixer.SetFloat("VOVolume", volume);
         sVO.value = volume;
-    }
-    public void SetResolution(int resolutionIndex)
-    {
-        Resolution _resolution = resolutions[resolutionIndex];
-        Screen.SetResolution(_resolution.width, _resolution.height, Screen.fullScreen);
-    }
-
-    public void SetFullScreen(bool b)
-    {
-        Screen.fullScreen = b;
     }
 
     void SetAudio()
@@ -168,19 +160,20 @@ public class GameSettings : MonoBehaviour
         SetAmbientVolume(value);
         SetVOVolume(value);
     }
-
-    private void OnGUI()
+    #endregion
+    #region Graphics
+    public void SetResolution(int resolutionIndex)
     {
-        if (currentkey != null)
-        {
-            Event e = Event.current;
-            if (e.isKey)
-            {
-                ChangeTheKey(currentkey.name, e.keyCode);
-            }
-        }
+        Resolution _resolution = resolutions[resolutionIndex];
+        Screen.SetResolution(_resolution.width, _resolution.height, Screen.fullScreen);
     }
 
+    public void SetFullScreen(bool b)
+    {
+        Screen.fullScreen = b;
+    }
+    #endregion
+    #region KeyBinding
     public void ChangeKey(GameObject go)
     {
         currentkey = go;
@@ -217,7 +210,7 @@ public class GameSettings : MonoBehaviour
             default:
                 break;
         }
-        Keybinds[name] = k;   
+        Keybinds[name] = k;
     }
 
     public void SetKeyDefault()
@@ -249,5 +242,35 @@ public class GameSettings : MonoBehaviour
         KB_Interact.transform.Find("Text").GetComponent<Text>().text = Keybinds["Interact"].ToString().ToUpper();
         Gamekit2D.PlayerInput.Instance.Interact.key = Keybinds["Interact"];
     }
+    #endregion
 
+
+    public void StartNewGame()
+    {
+        
+    }
+
+    public void StartContinueGame()
+    {
+
+    }
+    public void BackToMain()
+    {
+        Debug.Log("Going to Main");
+        //TODO
+        SceneManager.LoadScene("MenuScene");
+
+    }
+    public void QuitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
+    public void ExitPause()
+    {
+        PlayerCharacter.PlayerInstance.Unpause();
+    }
 }
