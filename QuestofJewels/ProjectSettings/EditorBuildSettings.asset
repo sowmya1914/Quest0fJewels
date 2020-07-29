@@ -6,12 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MenuScene.unity
-    guid: 332c36925869c2b40b5be9edec619c50
-  - enabled: 1
-    path: Assets/Scenes/AndyWorkSpace.unity
-    guid: fd557b962b9b5d54fb81e4eaab5eef58
-  - enabled: 1
     path: Assets/2DGamekit/Scenes/Start.unity
     guid: 57df1e417250bc247976c2c0dc088efe
   - enabled: 1
@@ -35,4 +29,31 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/2DGamekit/Scenes/UI/Loading.unity
     guid: ebc4647ff02971c4ba1b207af066be4d
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/TJayScene.unity
+    guid: 95953e9a93e3f554886dbd0caba64776
+  - enabled: 1
+    path: Assets/Scenes/New Scene.unity
+    guid: 14732b02b8d06994d8d002c686c22ede
+  - enabled: 1
+    path: Assets/Scenes/Underground.unity
+    guid: 8867d87af84fc5e49b20fde9cf54ea4a
   m_configObjects: {}
