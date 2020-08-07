@@ -8,12 +8,17 @@ public class PlatformRider : MonoBehaviour
     public Vector2 TargetPosition;
     private Rigidbody2D myRigidbody;
     public float speed = 2;
+    Damager damagerScript = null;
     // Start is called before the first frame update
     void Start()
     {
         if (myPlatform == null)
         {
             myPlatform = GetComponentInParent<MovingPlatform>();
+        }
+        if (damagerScript == null)
+        {
+            damagerScript = GetComponent<Damager>();
         }
         // myRigidbody = GetComponent<Rigidbody2D>();
     }
@@ -30,7 +35,17 @@ public class PlatformRider : MonoBehaviour
             }
             Vector3 direction = target - transform.localPosition;
             direction *= speed * Time.deltaTime;
-           // if (direction != Vector3.zero)
+            if (target != Vector3.zero)
+            {
+                if (damagerScript != null)
+                    damagerScript.enabled = true;
+            }
+            else
+            {
+                if (damagerScript != null)
+                    damagerScript.enabled = false;
+            }
+
             {
 
                 transform.Translate(direction, Space.Self);
