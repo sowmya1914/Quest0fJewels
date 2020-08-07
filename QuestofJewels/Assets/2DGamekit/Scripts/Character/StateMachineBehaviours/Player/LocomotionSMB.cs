@@ -23,6 +23,11 @@ namespace Gamekit2D
                 m_MonoBehaviour.SetVerticalMovement(m_MonoBehaviour.jumpSpeed);
             else if(m_MonoBehaviour.CheckForMeleeAttackInput ())
                 m_MonoBehaviour.MeleeAttack();
+            else if(m_MonoBehaviour.CheckForSwitchAttackInput())
+            {
+  
+                m_MonoBehaviour.SwitchAttack();
+            }
         }
     }
 }

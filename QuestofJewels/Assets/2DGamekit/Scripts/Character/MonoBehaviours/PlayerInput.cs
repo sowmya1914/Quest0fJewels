@@ -17,7 +17,8 @@ namespace Gamekit2D
         public InputButton Pause = new InputButton(KeyCode.Escape, XboxControllerButtons.Menu);
         public InputButton Interact = new InputButton(KeyCode.E, XboxControllerButtons.Y);
         public InputButton MeleeAttack = new InputButton(KeyCode.K, XboxControllerButtons.X);
-        public InputButton RangedAttack = new InputButton(KeyCode.O, XboxControllerButtons.B);
+        public InputButton RangedAttack = new InputButton(KeyCode.K, XboxControllerButtons.X);
+        public InputButton SwitchAttack = new InputButton(KeyCode.O, XboxControllerButtons.B);
         public InputButton Jump = new InputButton(KeyCode.Space, XboxControllerButtons.A);
         public InputAxis Horizontal = new InputAxis(KeyCode.D, KeyCode.A, XboxControllerAxes.LeftstickHorizontal);
         public InputAxis Vertical = new InputAxis(KeyCode.W, KeyCode.S, XboxControllerAxes.LeftstickVertical);
@@ -45,6 +46,7 @@ namespace Gamekit2D
         
             PersistentDataManager.RegisterPersister(this);
             ScoreSystemControl.Instance.Setup();
+            RangedAttack.Disable();
         }
 
         void OnDisable()
@@ -59,6 +61,7 @@ namespace Gamekit2D
             Pause.Get(fixedUpdateHappened, inputType);
             Interact.Get(fixedUpdateHappened, inputType);
             MeleeAttack.Get(fixedUpdateHappened, inputType);
+            SwitchAttack.Get(fixedUpdateHappened, inputType);
             RangedAttack.Get(fixedUpdateHappened, inputType);
             Jump.Get(fixedUpdateHappened, inputType);
             Horizontal.Get(inputType);
@@ -78,9 +81,11 @@ namespace Gamekit2D
             GainControl(Interact);
             GainControl(MeleeAttack);
             GainControl(RangedAttack);
+            GainControl(SwitchAttack);
             GainControl(Jump);
             GainControl(Horizontal);
             GainControl(Vertical);
+            Debug.Log("control gain");
         }
 
         public override void ReleaseControl(bool resetValues = true)
@@ -94,26 +99,34 @@ namespace Gamekit2D
             ReleaseControl(Jump, resetValues);
             ReleaseControl(Horizontal, resetValues);
             ReleaseControl(Vertical, resetValues);
+            Debug.Log("release");
         }
 
         public void DisableMeleeAttacking()
         {
+            Debug.Log("-3");
             MeleeAttack.Disable();
+            RangedAttack.Enable();
         }
 
         public void EnableMeleeAttacking()
         {
+            Debug.Log("-1");
             MeleeAttack.Enable();
+            RangedAttack.Disable();
         }
 
         public void DisableRangedAttacking()
         {
+            MeleeAttack.Enable();
             RangedAttack.Disable();
         }
 
         public void EnableRangedAttacking()
         {
+            MeleeAttack.Disable();
             RangedAttack.Enable();
+      
         }
 
         public DataSettings GetDataSettings()
@@ -167,6 +180,9 @@ namespace Gamekit2D
                         MeleeAttack.Enable();
                     else
                         MeleeAttack.Disable();
+
+                    RangedAttack.Disable();
+                    rangeAttackEnabled = false;
                 }
 
                 if (rangeAttackEnabled != RangedAttack.Enabled)
@@ -175,6 +191,9 @@ namespace Gamekit2D
                         RangedAttack.Enable();
                     else
                         RangedAttack.Disable();
+
+                    MeleeAttack.Disable();
+                    meleeAttackEnabled = false;
                 }
                 GUILayout.EndVertical();
                 GUILayout.EndArea();

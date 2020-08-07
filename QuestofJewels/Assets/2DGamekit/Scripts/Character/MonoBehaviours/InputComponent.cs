@@ -150,12 +150,29 @@ namespace Gamekit2D
 
             public void Enable()
             {
-                m_Enabled = true;
+
+                if (m_Enabled == false)
+                {
+                    m_Enabled = true;
+
+                }
+                else
+                {
+                    Disable();
+                }
             }
 
             public void Disable()
             {
-                m_Enabled = false;
+                if (m_Enabled == true)
+                {
+                    m_Enabled = false;
+
+                }
+                else
+                {
+                    Enable();
+                }
             }
 
             public void GainControl()
@@ -287,7 +304,7 @@ namespace Gamekit2D
 
         void Update()
         {
-            GetInputs(m_FixedUpdateHappened || Mathf.Approximately(Time.timeScale,0));
+            GetInputs(m_FixedUpdateHappened || Mathf.Approximately(Time.timeScale, 0));
 
             m_FixedUpdateHappened = false;
         }

@@ -200,6 +200,7 @@ public class GameSettings : MonoBehaviour
                 PlayerPrefs.SetInt("KB_M", (int)k);
                 break;
             case "Shoot":
+                Debug.Log("yolo");
                 Gamekit2D.PlayerInput.Instance.RangedAttack.key = k;
                 PlayerPrefs.SetInt("KB_S", (int)k);
                 break;
@@ -219,9 +220,9 @@ public class GameSettings : MonoBehaviour
         KB_Melee.transform.Find("Text").GetComponent<Text>().text = "K";
         PlayerPrefs.SetInt("KB_M", (int)KeyCode.K);
 
-        Gamekit2D.PlayerInput.Instance.RangedAttack.key = KeyCode.O;
-        KB_Shoot.transform.Find("Text").GetComponent<Text>().text = "O";
-        PlayerPrefs.SetInt("KB_S", (int)KeyCode.O);
+        Gamekit2D.PlayerInput.Instance.RangedAttack.key = KeyCode.K;
+        KB_Shoot.transform.Find("Text").GetComponent<Text>().text = "K";
+        PlayerPrefs.SetInt("KB_S", (int)KeyCode.K);
 
         Gamekit2D.PlayerInput.Instance.Interact.key = KeyCode.E;
         KB_Interact.transform.Find("Text").GetComponent<Text>().text = "E";
@@ -234,7 +235,7 @@ public class GameSettings : MonoBehaviour
         KB_Melee.transform.Find("Text").GetComponent<Text>().text = Keybinds["Melee"].ToString().ToUpper();
         Gamekit2D.PlayerInput.Instance.MeleeAttack.key = Keybinds["Melee"];
 
-        Keybinds.Add("Shoot", PlayerPrefs.HasKey("KB_S") ? (KeyCode)PlayerPrefs.GetInt("KB_S") : KeyCode.O);
+        Keybinds.Add("Shoot", PlayerPrefs.HasKey("KB_S") ? (KeyCode)PlayerPrefs.GetInt("KB_S") : KeyCode.K);
         KB_Shoot.transform.Find("Text").GetComponent<Text>().text = Keybinds["Shoot"].ToString().ToUpper();
         Gamekit2D.PlayerInput.Instance.RangedAttack.key = Keybinds["Shoot"];
 
