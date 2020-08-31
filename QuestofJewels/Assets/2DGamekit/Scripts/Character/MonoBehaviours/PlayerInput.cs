@@ -22,6 +22,7 @@ namespace Gamekit2D
         public InputButton Jump = new InputButton(KeyCode.Space, XboxControllerButtons.A);
         public InputAxis Horizontal = new InputAxis(KeyCode.D, KeyCode.A, XboxControllerAxes.LeftstickHorizontal);
         public InputAxis Vertical = new InputAxis(KeyCode.W, KeyCode.S, XboxControllerAxes.LeftstickVertical);
+        public InputAxis AngleShot = new InputAxis(KeyCode.UpArrow, KeyCode.DownArrow, XboxControllerAxes.RightstickVertical); // Dalton 8-28-2020
         [HideInInspector]
         public DataSettings dataSettings;
 
@@ -66,6 +67,7 @@ namespace Gamekit2D
             Jump.Get(fixedUpdateHappened, inputType);
             Horizontal.Get(inputType);
             Vertical.Get(inputType);
+            AngleShot.Get(inputType);
 
             if (Input.GetKeyDown(KeyCode.F12))
             {
@@ -85,6 +87,7 @@ namespace Gamekit2D
             GainControl(Jump);
             GainControl(Horizontal);
             GainControl(Vertical);
+            GainControl(AngleShot);
             Debug.Log("control gain");
         }
 
@@ -99,6 +102,7 @@ namespace Gamekit2D
             ReleaseControl(Jump, resetValues);
             ReleaseControl(Horizontal, resetValues);
             ReleaseControl(Vertical, resetValues);
+            ReleaseControl(AngleShot, resetValues);
             Debug.Log("release");
         }
 

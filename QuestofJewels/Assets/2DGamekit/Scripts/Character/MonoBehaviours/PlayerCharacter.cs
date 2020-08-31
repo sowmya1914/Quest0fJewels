@@ -331,7 +331,7 @@ namespace Gamekit2D
 
             BulletObject bullet = bulletPool.Pop(m_CurrentBulletSpawnPoint.position);
             bool facingLeft = m_CurrentBulletSpawnPoint == facingLeftBulletSpawnPoint;
-            bullet.rigidbody2D.velocity = new Vector2(facingLeft ? -bulletSpeed : bulletSpeed, 0f);
+            bullet.rigidbody2D.velocity = new Vector2(facingLeft ? -bulletSpeed : bulletSpeed, bulletSpeed * PlayerInput.Instance.AngleShot.Value);
             bullet.spriteRenderer.flipX = facingLeft ^ bullet.bullet.spriteOriginallyFacesLeft;
 
             rangedAttackAudioPlayer.PlayRandomSound();
