@@ -10,29 +10,14 @@ public class PortalActivator : MonoBehaviour
     public Sprite offSprite = null;
     public Sprite onSprite = null;
     private SpriteRenderer myRenderer = null;
+
+    private bool switchOn = false;
     private void Start()
     {
         thePlayerCharacter = GameObject.FindObjectOfType<PlayerCharacter>();
         myRenderer = GetComponent<SpriteRenderer>();
-
-        if (myRenderer != null)
-        {
-            if (portalToActivate != null)
-            {
-                if (offSprite != null && onSprite != null)
-                {
-                    if (portalToActivate.IS_PORTAL_OPEN == true)
-                    {
-                        myRenderer.sprite = onSprite;
-                    }
-                    else
-                    {
-                        myRenderer.sprite = offSprite;
-                    }
-                }
-            }
-        }
-
+        portalToActivate.setPA(this);
+        changeSprint();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -43,26 +28,29 @@ public class PortalActivator : MonoBehaviour
             {
                 if (portalToActivate != null)
                 {
-                    portalToActivate.IS_PORTAL_OPEN = !portalToActivate.IS_PORTAL_OPEN;
-
-                    if (myRenderer != null)
-                    {
-
-                        if (offSprite != null && onSprite != null)
-                        {
-                            if (portalToActivate.IS_PORTAL_OPEN == true)
-                            {
-                                myRenderer.sprite = onSprite;
-                            }
-                            else
-                            {
-                                myRenderer.sprite = offSprite;
-                            }
-                        }
-
-                    }
+                    switching(true);
+                    portalToActivate.IS_PORTAL_OPEN = true;
                 }
             }
         }
+    }
+
+    public void switching(bool b)
+    {
+        switchOn = b;
+        changeSprint();
+    }
+
+    private void changeSprint()
+    {
+        if (myRenderer != null)
+        {
+            if (offSprite != null && onSprite != null)
+            {
+                myRenderer.sprite = switchOn ? onSprite : offSprite;
+                return;
+            }
+        }
+        Debug.LogError("Portal ERROR");
     }
 }
