@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf7c34a0dc4e6348bea04faa70406ee, type: 3}
+  m_Name: ProtagonistSwaps
+  m_EditorClassIdentifier: 
+  m_Labels:
+  - m_Name: Head
+    m_Hash: 130111906
+    m_CategoryList:
+    - m_Name: A
+      m_Hash: -740712821
+      m_Sprite: {fileID: -1828374505767315391, guid: 950ba9b6ab45fae4e84b5eeb9448efe6,
+        type: 3}
+    - m_Name: B
+      m_Hash: 1255198513
+      m_Sprite: {fileID: -7084758578042399300, guid: bd7cbeea31eaa3a42be185a61b3b50ac,
+        type: 3}
+  - m_Name: Arm_Left_Hand
+    m_Hash: -1334962866
+    m_CategoryList:
+    - m_Name: A
+      m_Hash: -740712821
+      m_Sprite: {fileID: -6472567376767878544, guid: 950ba9b6ab45fae4e84b5eeb9448efe6,
+        type: 3}
+    - m_Name: B
+      m_Hash: 1255198513
+      m_Sprite: {fileID: 2467347639534837654, guid: bd7cbeea31eaa3a42be185a61b3b50ac,
+        type: 3}
+  - m_Name: Arm_Right_Bicep
+    m_Hash: 489869798
+    m_CategoryList:
+    - m_Name: A
+      m_Hash: -740712821
+      m_Sprite: {fileID: 2565641807015656217, guid: 950ba9b6ab45fae4e84b5eeb9448efe6,
+        type: 3}
+    - m_Name: B
+      m_Hash: 1255198513
+      m_Sprite: {fileID: -4045312195819326655, guid: bd7cbeea31eaa3a42be185a61b3b50ac,
+        type: 3}
+  - m_Name: Arm_Right_Hand
+    m_Hash: 699141441
+    m_CategoryList:
+    - m_Name: A
+      m_Hash: -740712821
+      m_Sprite: {fileID: 153632282398406178, guid: 950ba9b6ab45fae4e84b5eeb9448efe6,
+        type: 3}
+    - m_Name: B
+      m_Hash: 1255198513
+      m_Sprite: {fileID: -1964998438343988622, guid: bd7cbeea31eaa3a42be185a61b3b50ac,
+        type: 3}
+    - m_Name: C
+      m_Hash: 1037565863
+      m_Sprite: {fileID: -6603353921360830700, guid: bd7cbeea31eaa3a42be185a61b3b50ac,
+        type: 3}
+  - m_Name: UpperTorso
+    m_Hash: 1604115499
+    m_CategoryList:
+    - m_Name: A
+      m_Hash: -740712821
+      m_Sprite: {fileID: -5059224836631904058, guid: 950ba9b6ab45fae4e84b5eeb9448efe6,
+        type: 3}
+    - m_Name: B
+      m_Hash: 1255198513
+      m_Sprite: {fileID: -5521194366137016827, guid: bd7cbeea31eaa3a42be185a61b3b50ac,
+        type: 3}
+    - m_Name: C
+      m_Hash: 1037565863
+      m_Sprite: {fileID: -6186577044397233877, guid: bd7cbeea31eaa3a42be185a61b3b50ac,
+        type: 3}
+  - m_Name: LowerTorso
+    m_Hash: -40111440
+    m_CategoryList:
+    - m_Name: A
+      m_Hash: -740712821
+      m_Sprite: {fileID: -2215537679052314634, guid: 950ba9b6ab45fae4e84b5eeb9448efe6,
+        type: 3}
+    - m_Name: B
+      m_Hash: 1255198513
+      m_Sprite: {fileID: 5737007513696015702, guid: bd7cbeea31eaa3a42be185a61b3b50ac,
+        type: 3}
+    - m_Name: C
+      m_Hash: 1037565863
+      m_Sprite: {fileID: 1796588417945893063, guid: bd7cbeea31eaa3a42be185a61b3b50ac,
+        type: 3}
+  - m_Name: Leg_Left_Thigh
+    m_Hash: 1652313234
+    m_CategoryList:
+    - m_Name: A
+      m_Hash: -740712821
+      m_Sprite: {fileID: -161360190800968088, guid: 950ba9b6ab45fae4e84b5eeb9448efe6,
+        type: 3}
+    - m_Name: B
+      m_Hash: 1255198513
+      m_Sprite: {fileID: 562688180395329648, guid: 950ba9b6ab45fae4e84b5eeb9448efe6,
+        type: 3}
+  - m_Name: Leg_Left_Calf
+    m_Hash: 1716825448
+    m_CategoryList:
+    - m_Name: A
+      m_Hash: -740712821
+      m_Sprite: {fileID: 1184812776172406066, guid: 950ba9b6ab45fae4e84b5eeb9448efe6,
+        type: 3}
+    - m_Name: B
+      m_Hash: 1255198513
+      m_Sprite: {fileID: 562688180395329648, guid: 950ba9b6ab45fae4e84b5eeb9448efe6,
+        type: 3}
+  - m_Name: Leg_Left_Foot
+    m_Hash: -2088742181
+    m_CategoryList:
+    - m_Name: A
+      m_Hash: -740712821
+      m_Sprite: {fileID: -8710974837914513546, guid: 950ba9b6ab45fae4e84b5eeb9448efe6,
+        type: 3}
+    - m_Name: B
+      m_Hash: 1255198513
+      m_Sprite: {fileID: 654057410834935419, guid: 950ba9b6ab45fae4e84b5eeb9448efe6,
+        type: 3}
+  - m_Name: Coattail_Front
+    m_Hash: 186943577
+    m_CategoryList:
+    - m_Name: A
+      m_Hash: -740712821
+      m_Sprite: {fileID: 7669669510064543393, guid: 950ba9b6ab45fae4e84b5eeb9448efe6,
+        type: 3}
+    - m_Name: B
+      m_Hash: 1255198513
+      m_Sprite: {fileID: 4131953817425098927, guid: bd7cbeea31eaa3a42be185a61b3b50ac,
+        type: 3}
+    - m_Name: C
+      m_Hash: 1037565863
+      m_Sprite: {fileID: 4131953817425098927, guid: bd7cbeea31eaa3a42be185a61b3b50ac,
+        type: 3}
+  - m_Name: Codpiece
+    m_Hash: -1371302119
+    m_CategoryList:
+    - m_Name: A
+      m_Hash: -740712821
+      m_Sprite: {fileID: 2928295799635054480, guid: 950ba9b6ab45fae4e84b5eeb9448efe6,
+        type: 3}
+    - m_Name: B
+      m_Hash: 1255198513
+      m_Sprite: {fileID: 8806006640621750824, guid: bd7cbeea31eaa3a42be185a61b3b50ac,
+        type: 3}
+  - m_Name: Coattail_Back
+    m_Hash: -1109378720
+    m_CategoryList:
+    - m_Name: A
+      m_Hash: -740712821
+      m_Sprite: {fileID: -4064999923659957190, guid: 950ba9b6ab45fae4e84b5eeb9448efe6,
+        type: 3}
+    - m_Name: B
+      m_Hash: 1255198513
+      m_Sprite: {fileID: 2542111408919551368, guid: bd7cbeea31eaa3a42be185a61b3b50ac,
+        type: 3}
+    - m_Name: C
+      m_Hash: 1037565863
+      m_Sprite: {fileID: 4131953817425098927, guid: bd7cbeea31eaa3a42be185a61b3b50ac,
+        type: 3}
