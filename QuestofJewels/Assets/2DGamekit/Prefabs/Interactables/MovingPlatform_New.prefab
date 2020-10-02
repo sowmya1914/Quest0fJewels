@@ -148,7 +148,7 @@ MonoBehaviour:
   isMovingAtStart: 1
   localNodes:
   - {x: 0, y: 0, z: 0}
-  - {x: 6.9941254, y: 0.043804407, z: 0}
+  - {x: 6.779831, y: 0.039848328, z: 0}
   waitTimes:
   - 0
   - 0

@@ -9,62 +9,79 @@ public class SpikeWall : MonoBehaviour
     [Range(0.1f, 99)]
     public float dropTime;
     [Range(0.2f, 99)]
-    public float raiseDuration;
+    public float raiseWaitTime;
     [Range(0.2f, 99)]
-    public float frequency;
-    float height;
+    public float dropWaitTime;
+    [Range(0.0f, 99)]
+    public float initialWait = 0f;
+    float distance;
     float cheight = 0;
     float timer;
     bool raised = false;
+    enum state { init, raise, rPause, drop, dPause};
+    state cstate;
     // Start is called before the first frame update
     void Start()
     {
-        float temp = transform.Find("Top").transform.position.y - transform.position.y;
-        if (temp <= 0)
-            Debug.LogError("SpikeWall Need more height!");
-        else
-            height = temp;
-        timer = frequency;
+        distance = transform.Find("Top").transform.position.y - transform.position.y;
+        distance = Mathf.Abs(distance);
+        timer = initialWait;
+        cstate = state.init;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (!raised)
+        switch (cstate)
         {
-            timer -= Time.deltaTime;
-            if (timer < 0)
-            {
+            case state.init:
+                timer -= Time.deltaTime;
+                if(timer<=0)
+                {
+                    //timer = frequency;
+                    cstate = state.raise;
+                }
+                break;
+            case state.raise:
                 StartCoroutine(raise());
-                timer = raiseDuration;
-                raised = true;
-            }
-        }
-        else
-        {
-            timer -= Time.deltaTime;
-            if (timer < 0)
-            {
+                break;
+            case state.rPause:
+                timer -= Time.deltaTime;
+                if (timer <= 0)
+                {
+                    cstate = state.drop;
+                }
+                break;
+            case state.drop:
                 StartCoroutine(drop());
-                timer = frequency;
-                raised = false;
-            }
+                break;
+            case state.dPause:
+                timer -= Time.deltaTime;
+                if (timer <= 0)
+                {
+                    cstate = state.raise;
+                }
+                break;
+            default:
+                break;
         }
     }
     IEnumerator raise()
     {
-        float speed = height / raiseTime;
-        while (cheight < height)
+        float speed = distance / raiseTime;
+        while (cheight < distance)
         {
-            float amount = Mathf.Min(speed * Time.deltaTime, height - cheight);
+            float amount = Mathf.Min(speed * Time.deltaTime, distance - cheight);
             transform.Translate(0, amount, 0);
             cheight += amount;
             yield return null;
         }
+        timer = raiseWaitTime;
+        cstate = state.rPause;
     }
     IEnumerator drop()
     {
-        float speed = height / dropTime;
+        float speed = distance / dropTime;
         while (cheight > 0)
         {
             float amount = Mathf.Min(speed * Time.deltaTime, cheight);
@@ -72,5 +89,7 @@ public class SpikeWall : MonoBehaviour
             cheight -= amount;
             yield return null;
         }
+        timer = dropWaitTime;
+        cstate = state.dPause;
     }
 }
