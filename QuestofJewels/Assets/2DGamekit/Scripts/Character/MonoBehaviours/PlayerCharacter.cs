@@ -714,7 +714,10 @@ namespace Gamekit2D
             ScoreSystemControl.ResetScore();
             m_Animator.SetTrigger(m_HashDeadPara);
 
-            StartCoroutine(DieRespawnCoroutine(true, false));
+            //QOJ if you want the player spawn at check point, uncomment this
+            StartCoroutine(DieRespawnCoroutine(true, true));
+            //Otherwise go this
+            //StartCoroutine(DieRespawnCoroutine(true, false));
         }
 
         IEnumerator DieRespawnCoroutine(bool resetHealth, bool useCheckPoint)
