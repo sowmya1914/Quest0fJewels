@@ -38,7 +38,8 @@ namespace Gamekit2D
 
         public static void Create ()
         {
-            ScreenFader controllerPrefab = Resources.Load<ScreenFader> ("ScreenFader");
+            ScreenFader controllerPrefab = Resources.Load<ScreenFader> ("Assets/2DGamekit/Prefabs/SceneControl/ScreenFader");
+            //ScreenFader controllerPrefab = Resources.Load<ScreenFader> ("ScreenFader");
             s_Instance = Instantiate (controllerPrefab);
         }
 
