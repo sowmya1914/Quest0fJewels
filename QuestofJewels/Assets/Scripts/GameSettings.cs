@@ -27,7 +27,6 @@ public class GameSettings : MonoBehaviour
     GameObject currentkey;
     Dictionary<string, KeyCode> Keybinds;
 
-    // Start is called before the first frame update
     void Start()
     {
         ///Init
@@ -74,11 +73,6 @@ public class GameSettings : MonoBehaviour
         KeybindsSetup();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     private void OnGUI()
     {
         if (currentkey != null)
@@ -269,6 +263,12 @@ public class GameSettings : MonoBehaviour
 #else
         Application.Quit();
 #endif
+    }
+
+    public void GoToScene(string sceneName)
+    {
+        Debug.Log("Going to " + sceneName);
+        SceneManager.LoadScene(sceneName);
     }
     public void ExitPause()
     {
