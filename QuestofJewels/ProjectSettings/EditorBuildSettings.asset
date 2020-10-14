@@ -59,9 +59,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AndyWorkSpace.unity
     guid: fd557b962b9b5d54fb81e4eaab5eef58
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/QOJ/GameScene/Level 1-1.unity
-    guid: 07ed24ef498e6c54280c12dbcd79c38b
+    guid: 0c647e8bd0b7ddb4684f0542fbdf9b49
   - enabled: 1
     path: Assets/QOJ/GameScene/Level 1-2.unity
     guid: a5b70249713f3234389fff84ce9dc167
