@@ -3,8 +3,9 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -53,7 +54,7 @@ MonoBehaviour:
     - 0
     _innerLeftCapColliderType: 02000000
     _innerLeftCapOffset:
-    - -0.6
+    - -0.14
     _legacyRightCap:
       serializedVersion: 2
       x: 0
@@ -62,7 +63,7 @@ MonoBehaviour:
       height: 0
     _rightCaps:
     - serializedVersion: 2
-      x: 0
+      x: 0.5
       y: 0.09090909
       width: 0.5
       height: 0.09090909
@@ -71,7 +72,7 @@ MonoBehaviour:
     - 0
     _rightCapColliderType: 02000000
     _rightCapOffset:
-    - 0
+    - -0.14
     _legacyInnerRightCap:
       serializedVersion: 2
       x: 0
@@ -89,28 +90,28 @@ MonoBehaviour:
     - 0
     _innerRightCapColliderType: 02000000
     _innerRightCapOffset:
-    - -0.5
+    - -0.14
     _bodies:
     - serializedVersion: 2
-      x: 0
-      y: 0
-      width: 1
+      x: 1
+      y: 0.09090909
+      width: 0
       height: 0.09090909
     - serializedVersion: 2
-      x: 0
-      y: 0.72727275
-      width: 1
+      x: 0.875
+      y: 0.09090909
+      width: 0
       height: 0.09090909
     - serializedVersion: 2
-      x: 0
-      y: 0.8181818
-      width: 1
+      x: 0.75
+      y: 0.09090909
+      width: 0
       height: 0.09090909
     - serializedVersion: 2
-      x: 0
-      y: 0.90909094
-      width: 1
-      height: 0.08948863
+      x: 0.625
+      y: 0.09090909
+      width: 0
+      height: 0.09090909
     _bodyWeights: []
     _yOffsetPercent: 0.13
     _colliderOffset: -0.2
