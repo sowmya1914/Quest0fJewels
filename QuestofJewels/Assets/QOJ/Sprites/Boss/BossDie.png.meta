@@ -1,0 +1,449 @@
+fileFormatVersion: 2
+guid: 287bb70991e338747a52ec4004a345f0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2382270314679628693
+    second: BossDie_0
+  - first:
+      213: 5749426522013665469
+    second: BossDie_1
+  - first:
+      213: 8358855722298633039
+    second: BossDie_2
+  - first:
+      213: -881900544585292981
+    second: BossDie_3
+  - first:
+      213: -7963834898924387567
+    second: BossDie_4
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BossDie_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 449
+        width: 127
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30.5, y: 94}
+        - {x: -63.5, y: 17}
+        - {x: -63.5, y: 2}
+        - {x: -54.5, y: -6}
+        - {x: -47.5, y: -8}
+        - {x: -41.5, y: -13}
+        - {x: -40.5, y: -13}
+        - {x: -32.5, y: -11}
+        - {x: -24.5, y: -2}
+        - {x: -32.5, y: -12}
+        - {x: -35.5, y: -12}
+        - {x: -43.5, y: -14}
+        - {x: -45.5, y: -10}
+        - {x: -53.5, y: -9}
+        - {x: -63.5, y: -17}
+        - {x: -63.5, y: -37}
+        - {x: -54.5, y: -45}
+        - {x: -48.5, y: -44}
+        - {x: -17.5, y: -47}
+        - {x: -23.5, y: -70}
+        - {x: -0.5, y: -94}
+        - {x: 63.5, y: -94}
+        - {x: 63.5, y: 62}
+        - {x: 51.5, y: 94}
+      - - {x: 6.5, y: -66}
+        - {x: 7.5, y: -67}
+        - {x: 10.5, y: -64}
+        - {x: 9.5, y: -61}
+        - {x: 11.5, y: -58}
+        - {x: 10.5, y: -58}
+        - {x: 13.5, y: -61}
+        - {x: 14.5, y: -61}
+        - {x: 17.5, y: -58}
+        - {x: 17.5, y: -57}
+        - {x: 20.5, y: -52}
+        - {x: 20.5, y: -49}
+        - {x: 16.5, y: -55}
+        - {x: 16.5, y: -60}
+        - {x: 13.5, y: -65}
+        - {x: 9.5, y: -66}
+      - - {x: 11.5, y: -68}
+        - {x: 14.5, y: -67}
+        - {x: 14.5, y: -64}
+        - {x: 11.5, y: -63}
+        - {x: 9.5, y: -65}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4535b844f202664194276ed72c6e1b1
+      internalID: -2382270314679628693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossDie_1
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 449
+        width: 127
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15.5, y: -86}
+        - {x: 20.5, y: -86}
+        - {x: 32.5, y: -82}
+        - {x: 60.5, y: -52}
+        - {x: 63.5, y: -35}
+        - {x: 63.5, y: 82}
+        - {x: 54.5, y: 93}
+        - {x: -23.5, y: 93}
+        - {x: -63.5, y: 16}
+        - {x: -63.5, y: -3}
+        - {x: -51.5, y: -13}
+        - {x: -47.5, y: -12}
+        - {x: -41.5, y: -16}
+        - {x: -37.5, y: -17}
+        - {x: -31.5, y: -15}
+        - {x: -24.5, y: -6}
+        - {x: -31.5, y: -15}
+        - {x: -34.5, y: -16}
+        - {x: -38.5, y: -18}
+        - {x: -45.5, y: -14}
+        - {x: -61.5, y: -11}
+        - {x: -63.5, y: -18}
+        - {x: -63.5, y: -51}
+        - {x: -24.5, y: -93}
+        - {x: -1.5, y: -93}
+        - {x: -0.5, y: -92}
+        - {x: 0.5, y: -77}
+        - {x: -6.5, y: -71}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c623fb85eaa24fc4190fb04c700b7644
+      internalID: 5749426522013665469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossDie_2
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 452
+        width: 132
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14, y: 76}
+        - {x: -7, y: 70}
+        - {x: -13, y: 65}
+        - {x: -41, y: 36}
+        - {x: -66, y: -5}
+        - {x: -66, y: -44}
+        - {x: -63, y: -56}
+        - {x: -42, y: -76}
+        - {x: 18, y: -76}
+        - {x: 66, y: -50}
+        - {x: 66, y: 49}
+        - {x: 55, y: 76}
+      - - {x: 36, y: -13}
+        - {x: 35, y: -15}
+        - {x: 41, y: -24}
+        - {x: 42, y: -23}
+      - - {x: -27, y: -5}
+        - {x: -21, y: 2}
+        - {x: -8, y: 16}
+        - {x: -11, y: -8}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a880fd38ec931f4183ca67041823fd7
+      internalID: 8358855722298633039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossDie_3
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 374
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 510991b34401ae4479c544723c110d43
+      internalID: -881900544585292981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossDie_4
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 249
+        width: 216
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -65, y: -53.5}
+        - {x: -66, y: -50.5}
+        - {x: -70, y: -50.5}
+        - {x: -71, y: -53.5}
+      - - {x: 95, y: 53.5}
+        - {x: -73, y: 53.5}
+        - {x: -108, y: 39.5}
+        - {x: -108, y: -30.5}
+        - {x: 87, y: -30.5}
+        - {x: 108, y: -10.5}
+        - {x: 108, y: 39.5}
+        - {x: 105, y: 46.5}
+      - - {x: -4, y: 41.5}
+        - {x: -2, y: 39.5}
+        - {x: 1, y: 40.5}
+        - {x: 1, y: 43.5}
+        - {x: -1, y: 45.5}
+        - {x: -4, y: 44.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6227077d25e1ee742827a382b4e403ee
+      internalID: -7963834898924387567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -235.5, y: 19.5}
+      - {x: -303.5, y: 10.5}
+      - {x: -327.5, y: -11.5}
+      - {x: -327.5, y: -61.5}
+      - {x: -325.5, y: -66.5}
+      - {x: -148.5, y: -66.5}
+      - {x: -107.5, y: -52.5}
+      - {x: -107.5, y: 4.5}
+      - {x: -133.5, y: 19.5}
+    - - {x: -221.5, y: 5.5}
+      - {x: -219.5, y: 3.5}
+      - {x: -216.5, y: 4.5}
+      - {x: -216.5, y: 7.5}
+      - {x: -218.5, y: 9.5}
+      - {x: -221.5, y: 8.5}
+    - - {x: -111.5, y: 39.5}
+      - {x: -111.5, y: 33.5}
+      - {x: -106.5, y: 33.5}
+      - {x: -102.5, y: 35.5}
+      - {x: -102.5, y: 41.5}
+      - {x: -105.5, y: 44.5}
+      - {x: -107.5, y: 44.5}
+    - - {x: -191.5, y: 161.5}
+      - {x: -191.5, y: 268.5}
+      - {x: -207.5, y: 300.5}
+      - {x: -257.5, y: 300.5}
+      - {x: -273.5, y: 295.5}
+      - {x: -302.5, y: 255.5}
+      - {x: -313.5, y: 216.5}
+      - {x: -312.5, y: 197.5}
+      - {x: -304.5, y: 196.5}
+      - {x: -298.5, y: 191.5}
+      - {x: -297.5, y: 191.5}
+      - {x: -289.5, y: 193.5}
+      - {x: -281.5, y: 202.5}
+      - {x: -289.5, y: 192.5}
+      - {x: -292.5, y: 192.5}
+      - {x: -300.5, y: 190.5}
+      - {x: -302.5, y: 194.5}
+      - {x: -310.5, y: 196.5}
+      - {x: -322.5, y: 185.5}
+      - {x: -322.5, y: 148.5}
+      - {x: -284.5, y: 108.5}
+      - {x: -221.5, y: 108.5}
+      - {x: -191.5, y: 113.5}
+      - {x: -191.5, y: 129.5}
+      - {x: -193.5, y: 136.5}
+    - - {x: -109.5, y: 126.5}
+      - {x: -117.5, y: 132.5}
+      - {x: -95.5, y: 117.5}
+      - {x: -84.5, y: 108.5}
+      - {x: -55.5, y: 108.5}
+      - {x: -45.5, y: 134.5}
+      - {x: -45.5, y: 295.5}
+      - {x: -51.5, y: 298.5}
+      - {x: -98.5, y: 298.5}
+      - {x: -121.5, y: 293.5}
+      - {x: -159.5, y: 242.5}
+      - {x: -167.5, y: 207.5}
+      - {x: -162.5, y: 190.5}
+      - {x: -152.5, y: 187.5}
+      - {x: -148.5, y: 186.5}
+      - {x: -142.5, y: 188.5}
+      - {x: -135.5, y: 197.5}
+      - {x: -132.5, y: 187.5}
+      - {x: -145.5, y: 187.5}
+      - {x: -149.5, y: 186.5}
+      - {x: -164.5, y: 191.5}
+      - {x: -176.5, y: 184.5}
+      - {x: -176.5, y: 161.5}
+      - {x: -162.5, y: 139.5}
+      - {x: -139.5, y: 108.5}
+      - {x: -122.5, y: 108.5}
+      - {x: -118.5, y: 113.5}
+      - {x: -118.5, y: 116.5}
+      - {x: -116.5, y: 113.5}
+      - {x: -112.5, y: 111.5}
+    - - {x: 95.5, y: 267.5}
+      - {x: 21.5, y: 267.5}
+      - {x: -21.5, y: 199.5}
+      - {x: -21.5, y: 120.5}
+      - {x: 13.5, y: 111.5}
+      - {x: 105.5, y: 111.5}
+      - {x: 114.5, y: 141.5}
+      - {x: 114.5, y: 254.5}
+      - {x: 105.5, y: 264.5}
+    - - {x: -250.5, y: 138.5}
+      - {x: -249.5, y: 137.5}
+      - {x: -246.5, y: 140.5}
+      - {x: -247.5, y: 143.5}
+      - {x: -245.5, y: 146.5}
+      - {x: -246.5, y: 146.5}
+      - {x: -243.5, y: 143.5}
+      - {x: -242.5, y: 143.5}
+      - {x: -236.5, y: 149.5}
+      - {x: -236.5, y: 157.5}
+      - {x: -239.5, y: 151.5}
+      - {x: -239.5, y: 148.5}
+      - {x: -240.5, y: 147.5}
+      - {x: -240.5, y: 144.5}
+      - {x: -243.5, y: 139.5}
+      - {x: -247.5, y: 138.5}
+    - - {x: -245.5, y: 136.5}
+      - {x: -242.5, y: 137.5}
+      - {x: -242.5, y: 140.5}
+      - {x: -245.5, y: 141.5}
+      - {x: -247.5, y: 139.5}
+    - - {x: 82.5, y: 176.5}
+      - {x: 81.5, y: 174.5}
+      - {x: 87.5, y: 165.5}
+      - {x: 88.5, y: 166.5}
+    - - {x: 19.5, y: 184.5}
+      - {x: 24.5, y: 191.5}
+      - {x: 31.5, y: 202.5}
+      - {x: 34.5, y: 182.5}
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
