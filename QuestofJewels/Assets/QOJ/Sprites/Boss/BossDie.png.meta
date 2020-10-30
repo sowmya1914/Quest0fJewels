@@ -108,8 +108,8 @@ TextureImporter:
         y: 449
         width: 127
         height: 188
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -30.5, y: 94}
@@ -174,8 +174,8 @@ TextureImporter:
         y: 449
         width: 127
         height: 186
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 15.5, y: -86}
@@ -223,8 +223,8 @@ TextureImporter:
         y: 452
         width: 132
         height: 152
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 14, y: 76}
@@ -285,8 +285,8 @@ TextureImporter:
         y: 249
         width: 216
         height: 107
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.23}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -65, y: -53.5}

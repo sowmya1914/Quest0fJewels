@@ -117,8 +117,8 @@ TextureImporter:
         y: 425
         width: 127
         height: 212
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 15.5, y: -47}
@@ -186,12 +186,12 @@ TextureImporter:
       name: BossRun1
       rect:
         serializedVersion: 2
-        x: 170
-        y: 429
+        x: 171
+        y: 430
         width: 137
         height: 201
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 57.5, y: 100.5}
@@ -232,8 +232,8 @@ TextureImporter:
         y: 430
         width: 133
         height: 200
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -34.5, y: -71}
@@ -276,8 +276,8 @@ TextureImporter:
         y: 466
         width: 199
         height: 153
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -0.5, y: 76.5}
@@ -304,8 +304,8 @@ TextureImporter:
         y: 195
         width: 171
         height: 178
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 60.5, y: -44}
@@ -340,8 +340,8 @@ TextureImporter:
         y: 192
         width: 159
         height: 183
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 39.5, y: 91.5}
@@ -379,8 +379,8 @@ TextureImporter:
         y: 187
         width: 114
         height: 191
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -396,12 +396,12 @@ TextureImporter:
       name: BossRun7
       rect:
         serializedVersion: 2
-        x: 478
+        x: 479
         y: 212
         width: 181
         height: 162
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

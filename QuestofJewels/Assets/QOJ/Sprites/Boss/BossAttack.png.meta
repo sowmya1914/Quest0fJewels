@@ -20,6 +20,24 @@ TextureImporter:
   - first:
       213: 4168814211697802380
     second: image1_5
+  - first:
+      213: -7100139421218375167
+    second: BossAttack_0
+  - first:
+      213: -8562381307189060055
+    second: BossAttack_1
+  - first:
+      213: -38360194038036729
+    second: BossAttack_2
+  - first:
+      213: 1035125427294340195
+    second: BossAttack_3
+  - first:
+      213: -8250601566189378110
+    second: BossAttack_4
+  - first:
+      213: -4916702465057937552
+    second: BossAttack_5
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -104,127 +122,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: image1_0
+      name: BossAttack_0
       rect:
         serializedVersion: 2
         x: 18
         y: 449
         width: 127
         height: 188
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96db2fff2fdcd934ca5eb116dc71bec5
-      internalID: -6815437586108985893
+      spriteID: c867553ac6642684fafeb1f7a39b393e
+      internalID: -7100139421218375167
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: image1_1
+      name: BossAttack_1
       rect:
         serializedVersion: 2
         x: 164
         y: 449
         width: 127
         height: 186
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d32577e8f28c294b9ded49fa64ce75a
-      internalID: 5375789663373006074
+      spriteID: 87733794c4f979c498ddd981e1ce0b83
+      internalID: -8562381307189060055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: image1_2
+      name: BossAttack_2
       rect:
         serializedVersion: 2
-        x: 336
-        y: 453
+        x: 337
+        y: 454
         width: 122
         height: 167
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc94dd0adf62ce646ad58b5ca287ded0
-      internalID: -3475337578124488834
+      spriteID: 16e01cee73d17894b9f7e7c460e480ac
+      internalID: -38360194038036729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: image1_3
+      name: BossAttack_3
       rect:
         serializedVersion: 2
         x: 489
         y: 439
         width: 127
         height: 186
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: -0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66b6988f2680e9242955684c5b7163d0
-      internalID: 6852249180216158449
+      spriteID: 771c82c565289a84db2611271d6d31df
+      internalID: 1035125427294340195
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: image1_4
+      name: BossAttack_4
       rect:
         serializedVersion: 2
         x: 32
         y: 283
         width: 132
         height: 152
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: -0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9529515a90d54db4c90a849b537b3856
-      internalID: 6350595012399627767
+      spriteID: 382c12a45f2211e4c8982dfdc392972d
+      internalID: -8250601566189378110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: image1_5
+      name: BossAttack_5
       rect:
         serializedVersion: 2
         x: 173
         y: 279
         width: 133
         height: 152
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36f401b70368cdb489495a3f0c6d6208
-      internalID: 4168814211697802380
+      spriteID: dd67333363ac48c418120e2be8e3281b
+      internalID: -4916702465057937552
       vertices: []
       indices: 
       edges: []
