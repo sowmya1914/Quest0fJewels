@@ -110,9 +110,19 @@ namespace Gamekit2D
             if (m_PlayerInput == null)
                 m_PlayerInput = FindObjectOfType<PlayerInput>();
             m_PlayerInput.ReleaseControl(resetInputValues);
+            ScreenFader.Instance.setLoadingBar(0);
             yield return StartCoroutine(ScreenFader.FadeSceneOut(ScreenFader.FadeType.Loading));
             PersistentDataManager.ClearPersisters();
-            yield return SceneManager.LoadSceneAsync(newSceneName);
+
+            AsyncOperation operation = SceneManager.LoadSceneAsync(newSceneName);
+            while (!operation.isDone)
+            {
+                float progress = Mathf.Clamp01(operation.progress / .9f);
+                ScreenFader.Instance.setLoadingBar(progress);
+                yield return null;
+            }
+            Debug.Log(operation.isDone);
+            //yield return SceneManager.LoadSceneAsync(newSceneName);
             m_PlayerInput = FindObjectOfType<PlayerInput>();
             m_PlayerInput.ReleaseControl(resetInputValues);
             PersistentDataManager.LoadAllData();

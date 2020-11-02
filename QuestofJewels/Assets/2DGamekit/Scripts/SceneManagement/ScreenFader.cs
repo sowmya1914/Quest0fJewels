@@ -48,6 +48,7 @@ namespace Gamekit2D
         public CanvasGroup loadingCanvasGroup;
         public CanvasGroup gameOverCanvasGroup;
         public float fadeDuration = 1f;
+        public Slider loadingBar;
 
         protected bool m_IsFading;
     
@@ -62,6 +63,8 @@ namespace Gamekit2D
             }
         
             DontDestroyOnLoad (gameObject);
+            if (!loadingBar)
+                loadingBar = loadingCanvasGroup.transform.Find("ProgressBar").GetComponent<Slider>();
         }
 
         protected IEnumerator Fade(float finalAlpha, CanvasGroup canvasGroup)
@@ -119,6 +122,13 @@ namespace Gamekit2D
             canvasGroup.gameObject.SetActive (true);
             
             yield return Instance.StartCoroutine(Instance.Fade(1f, canvasGroup));
+        }
+
+        public void setLoadingBar(float _value)
+        {
+            //if (!loadingBar)
+              //  loadingBar = loadingCanvasGroup.transform.Find("ProgressBar").GetComponent<Slider>();
+            loadingBar.value = _value;
         }
     }
 }
