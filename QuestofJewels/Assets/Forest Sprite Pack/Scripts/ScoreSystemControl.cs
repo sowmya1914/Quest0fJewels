@@ -212,6 +212,7 @@ public class ScoreSystemControl : MonoBehaviour
     private void Start()
     {
         Create();
+        scoreCanvas.gameObject.SetActive(false);
     }
     private void Update()
     {
