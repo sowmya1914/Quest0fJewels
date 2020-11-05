@@ -100,7 +100,7 @@ namespace Gamekit2D
                 OnHealthSet.Invoke(this);
             }
 
-            m_DamageDirection = transform.position + (Vector3)centreOffset - damager.transform.position;
+            m_DamageDirection = transform.position + (Vector3)centreOffset - damager.pos;
 
             OnTakeDamage.Invoke(damager, this);
 

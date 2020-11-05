@@ -42,6 +42,7 @@ namespace Gamekit2D
         protected Collider2D[] m_AttackOverlapResults = new Collider2D[10];
         protected Transform m_DamagerTransform;
         protected Collider2D m_LastHit;
+        public Vector3 pos;
 
         void Awake()
         {
@@ -90,6 +91,7 @@ namespace Gamekit2D
 
                 if (damageable)
                 {
+                    pos = transform.position;
                     OnDamageableHit.Invoke(this, damageable);
                     damageable.TakeDamage(this, ignoreInvincibility);
                     if (disableDamageAfterHit)

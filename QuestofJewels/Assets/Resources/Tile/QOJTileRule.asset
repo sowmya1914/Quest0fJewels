@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d746e0082aaaaf0458b2b02bb4d45a47, type: 3}
   m_Name: QOJTileRule
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: -5567904629385750496, guid: f56d31d2899d5184d9e69275c1f907ab,
+  m_DefaultSprite: {fileID: -1320220480006799231, guid: 32ea407af24bc8c49a6c0224e0157ef3,
     type: 3}
   m_DefaultColliderType: 1
   m_TilingRules:
