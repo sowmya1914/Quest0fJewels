@@ -3,6 +3,8 @@ using Gamekit2D;
 
 public class JumpJewel : MonoBehaviour
 {
+    #region Variables
+
     [Range(1, 10)]
     [SerializeField] float jumpIncrease = 3;
     [Range(1, 10)]
@@ -13,6 +15,8 @@ public class JumpJewel : MonoBehaviour
     BoxCollider2D col;
     SpriteRenderer rend;
     bool startCountdown = false;
+
+    #endregion
 
     void Start()
     {

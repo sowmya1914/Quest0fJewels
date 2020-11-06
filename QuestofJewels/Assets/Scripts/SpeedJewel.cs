@@ -3,6 +3,8 @@ using Gamekit2D;
 
 public class SpeedJewel : MonoBehaviour
 {
+    #region Variables 
+
     [Range(1, 10)]
     [SerializeField] float speedIncrease = 3;
     [Range(1, 10)]
@@ -13,6 +15,8 @@ public class SpeedJewel : MonoBehaviour
     BoxCollider2D col;
     SpriteRenderer rend;
     bool startCountdown = false;
+
+    #endregion
 
     void Start()
     {

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class BackgroundMusicChanger : MonoBehaviour
 {
     public AudioSource backgroundMusic;
@@ -13,11 +13,31 @@ public class BackgroundMusicChanger : MonoBehaviour
     private RaycastHit hitBox;
     Collider2D[] detections = new Collider2D[1024];
     private Rigidbody2D targetRigidbody;
+    private static float saveLoadTime;
     // Start is called before the first frame update
     void Start()
     {
         ReTarget();
     }
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += loadMusicTime;
+       // SceneManager.sceneUnloaded += saveMusicTime;
+    }
+
+    private void saveMusicTime(Scene current)
+    {
+        if (backgroundMusic != null)
+            saveLoadTime = backgroundMusic.time;
+        Debug.Log("saving music " + saveLoadTime);
+    }
+    private void loadMusicTime(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("loading music " + saveLoadTime);
+        if (backgroundMusic != null)
+            backgroundMusic.time = saveLoadTime;
+    }
+  
     private void Awake()
     {
         ReTarget();
@@ -27,7 +47,7 @@ public class BackgroundMusicChanger : MonoBehaviour
         if (backgroundMusic == null)
         {
             backgroundMusic = GetComponent<AudioSource>();
-   
+
         }
         if (thePlayer == null)
         {
@@ -45,6 +65,8 @@ public class BackgroundMusicChanger : MonoBehaviour
         {
             if (backgroundMusic != null)
             {
+                saveLoadTime = backgroundMusic.time;
+               
 
                 // if (Physics.SphereCast(thePlayer.GetComponent<Rigidbody2D>().position, enemyDetectRadius, Vector3.right, out hitBox, enemyDetectRadius * 2.0f, layerMaskDetect))
                 if (Physics2D.OverlapCircleNonAlloc(targetRigidbody.position, enemyDetectRadius * 2, detections, layerMaskDetect) > 0)
