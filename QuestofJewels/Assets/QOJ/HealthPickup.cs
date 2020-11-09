@@ -18,6 +18,7 @@ public class HealthPickup : MonoBehaviour
             if(player.startingHealth < 5)
             {
                 player.startingHealth += healAmount;
+                gameObject.SetActive(false);
             }
         }
     }
