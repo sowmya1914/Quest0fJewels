@@ -19,6 +19,7 @@ namespace Gamekit2D
         { }
 
         public int startingHealth = 5;
+        public bool m_ImmuteToDamage;
         public bool invulnerableAfterDamage = true;
         public float invulnerabilityDuration = 3f;
         public bool disableOnDeath = false;
@@ -89,7 +90,7 @@ namespace Gamekit2D
 
         public void TakeDamage(Damager damager, bool ignoreInvincible = false)
         {
-            if ((m_Invulnerable && !ignoreInvincible) || m_CurrentHealth <= 0)
+            if ((m_Invulnerable && !ignoreInvincible) || m_CurrentHealth <= 0 || m_ImmuteToDamage)
                 return;
 
             //we can reach that point if the damager was one that was ignoring invincible state.

@@ -61,25 +61,35 @@ namespace Gamekit2D
 
     public class HealthUI : MonoBehaviour
     {
-        public Damageable player;
+        public Damageable character;
         Slider healthBar;
 
         void Start()
         {
-            if (!player)
+            if (!character)
             {
                 Debug.LogError("HealthUI Need Player!");
                 return;
             }
-            healthBar = transform.Find("HealthBar").GetComponent<Slider>();
-            healthBar.maxValue = player.startingHealth;
-            healthBar.value = player.startingHealth;
+            else
+            {
+                healthBar = transform.Find("HealthBar").GetComponent<Slider>();
+                healthBar.maxValue = character.startingHealth;
+                healthBar.value = character.startingHealth;
+            }         
         }
 
         public void UpdateHealth(Damageable damageable)
         {
             if(healthBar)
                 healthBar.value = damageable.CurrentHealth;
+        }
+
+        public void startFight()
+        {
+            healthBar = transform.Find("HealthBar").GetComponent<Slider>();
+            healthBar.maxValue = character.startingHealth;
+            healthBar.value = character.startingHealth;
         }
     }
 }
