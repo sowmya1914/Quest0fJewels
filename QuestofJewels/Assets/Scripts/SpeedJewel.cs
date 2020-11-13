@@ -14,6 +14,7 @@ public class SpeedJewel : MonoBehaviour
     PlayerCharacter playerCharacter;
     BoxCollider2D col;
     SpriteRenderer rend;
+    Animator anim;
     bool startCountdown = false;
 
     #endregion
@@ -22,6 +23,7 @@ public class SpeedJewel : MonoBehaviour
     {
         col = GetComponent<BoxCollider2D>();
         rend = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -41,6 +43,7 @@ public class SpeedJewel : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
+            anim.enabled = false;
             rend.enabled = false;
             col.enabled = false;
             playerCharacter = collision.gameObject.GetComponent<PlayerCharacter>();
