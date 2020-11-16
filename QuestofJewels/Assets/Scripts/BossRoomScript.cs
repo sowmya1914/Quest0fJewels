@@ -9,7 +9,7 @@ public class BossRoomScript : MonoBehaviour
     public List<GameObject> enemyType;
     Gamekit2D.Damageable boss;
     bool start;
-    public UnityEvent onStart, onEnd;
+    public UnityEvent onEnd, onDie;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,21 +19,30 @@ public class BossRoomScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(start)
+        if (start)
         {
             if (enemyList.Count == 0)
                 allEnemyIsDead();
         }
-        
+
     }
 
     public void startFight()
     {
-        boss = GameObject.Find("Boss").GetComponent<Gamekit2D.Damageable>();
-        if (!boss)
-            Debug.Log("No Boss is Found");
-        start = true;
-        onStart.Invoke();
+        if (!start)
+        {
+            boss = GameObject.Find("Boss").GetComponent<Gamekit2D.Damageable>();
+            if (!boss)
+                Debug.Log("No Boss is Found");
+            start = true;
+            foreach (var item in enemyType)
+            {
+                GameObject temp = Instantiate(item);
+                temp.SetActive(true);
+                temp.GetComponent<Gamekit2D.Damageable>().OnDie.AddListener(removeEnemy);
+                enemyList.Add(temp);
+            }
+        }
     }
     public void endFight()
     {
@@ -43,10 +52,32 @@ public class BossRoomScript : MonoBehaviour
     public void bossGotHit()
     {
         boss.m_ImmuteToDamage = true;
+        if (boss.CurrentHealth > 0)
+        {
+            foreach (var item in enemyType)
+            {
+                GameObject temp = Instantiate(item);
+                temp.SetActive(true);
+                temp.GetComponent<Gamekit2D.Damageable>().OnDie.AddListener(removeEnemy);
+                enemyList.Add(temp);
+            }
+        }
     }
 
     void allEnemyIsDead()
     {
         boss.m_ImmuteToDamage = false;
+    }
+
+    void removeEnemy(Gamekit2D.Damager er, Gamekit2D.Damageable able)
+    {
+        GameObject obj = able.gameObject;
+        if (enemyList.Contains(obj))
+            enemyList.Remove(obj);
+    }
+
+    public void charDie()
+    {
+        onDie.Invoke();
     }
 }
