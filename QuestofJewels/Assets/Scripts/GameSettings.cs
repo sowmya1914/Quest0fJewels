@@ -89,32 +89,32 @@ public class GameSettings : MonoBehaviour
     public void SetMasterVolume(float volume)
     {
         PlayerPrefs.SetFloat("Master_Vol", volume);
-        audioMixer.SetFloat("MasterVolume", volume);
         sMaster.value = volume;
+        audioMixer.SetFloat("MasterVolume", Mathf.Log10(volume) * 20f);
     }
     public void SetMusicVolume(float volume)
     {
         PlayerPrefs.SetFloat("BGM_Vol", volume);
-        audioMixer.SetFloat("MusicVolume", volume);
         sBGM.value = volume;
+        audioMixer.SetFloat("MusicVolume", Mathf.Log10(volume) * 20f);
     }
     public void SetSFXVolume(float volume)
     {
         PlayerPrefs.SetFloat("SFx_Vol", volume);
-        audioMixer.SetFloat("SFXVolume", volume);
         sSfx.value = volume;
+        audioMixer.SetFloat("SFXVolume", Mathf.Log10(volume) * 20f);
     }
     public void SetAmbientVolume(float volume)
     {
         PlayerPrefs.SetFloat("Amb_Vol", volume);
-        audioMixer.SetFloat("AmbientVolume", volume);
         sAmbient.value = volume;
+        audioMixer.SetFloat("AmbientVolume", Mathf.Log10(volume) * 20f);
     }
     public void SetVOVolume(float volume)
     {
         PlayerPrefs.SetFloat("VO_Vol", volume);
-        audioMixer.SetFloat("VOVolume", volume);
         sVO.value = volume;
+        audioMixer.SetFloat("VOVolume", Mathf.Log10(volume) * 20f);
     }
 
     void SetAudio()
@@ -147,7 +147,7 @@ public class GameSettings : MonoBehaviour
 
     public void SetAudioDefault()
     {
-        float value = -20;
+        float value = 0.8f;
         SetMasterVolume(value);
         SetMusicVolume(value);
         SetSFXVolume(value);

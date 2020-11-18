@@ -43,6 +43,7 @@ namespace Gamekit2D
     
         bool m_TransitioningGameObjectPresent;
 
+        public bool isActive = true;
         public UnityEvent onActive;
 
         void Start ()
@@ -53,7 +54,7 @@ namespace Gamekit2D
 
         void OnTriggerEnter2D (Collider2D other)
         {
-            if (other.gameObject == transitioningGameObject)
+            if (isActive && other.gameObject == transitioningGameObject)
             {
                 m_TransitioningGameObjectPresent = true;
 
@@ -119,6 +120,7 @@ namespace Gamekit2D
 
         public void TeleporterActive()
         {
+            isActive = true;
             onActive.Invoke();
         }
     }

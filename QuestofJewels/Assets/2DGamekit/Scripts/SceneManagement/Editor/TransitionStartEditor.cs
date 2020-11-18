@@ -22,6 +22,7 @@ namespace Gamekit2D
         SerializedProperty m_OnHasItemProp;
         SerializedProperty m_OnDoesNotHaveItemProp;
         SerializedProperty m_OnActive;
+        SerializedProperty m_IsActive;
 
         GUIContent[] m_InventoryControllerItems = new GUIContent[0];
 
@@ -41,6 +42,7 @@ namespace Gamekit2D
             m_OnHasItemProp = m_InventoryCheckProp.FindPropertyRelative("OnHasItem");
             m_OnDoesNotHaveItemProp = m_InventoryCheckProp.FindPropertyRelative("OnDoesNotHaveItem");
             m_OnActive = serializedObject.FindProperty("onActive");
+            m_IsActive = serializedObject.FindProperty("isActive");
         }
 
         public override void OnInspectorGUI ()
@@ -125,6 +127,7 @@ namespace Gamekit2D
             }
 
             EditorGUILayout.PropertyField(m_OnActive);
+            EditorGUILayout.PropertyField(m_IsActive);
 
             serializedObject.ApplyModifiedProperties ();
         }
