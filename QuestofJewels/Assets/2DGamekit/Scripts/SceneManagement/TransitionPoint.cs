@@ -1,6 +1,7 @@
 ﻿using Cinemachine;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering;
+using UnityEngine.Events;
 
 namespace Gamekit2D
 {
@@ -42,6 +43,9 @@ namespace Gamekit2D
     
         bool m_TransitioningGameObjectPresent;
 
+        public bool isActive = true;
+        public UnityEvent onActive;
+
         void Start ()
         {
             if (transitionWhen == TransitionWhen.ExternalCall)
@@ -50,7 +54,7 @@ namespace Gamekit2D
 
         void OnTriggerEnter2D (Collider2D other)
         {
-            if (other.gameObject == transitioningGameObject)
+            if (isActive && other.gameObject == transitioningGameObject)
             {
                 m_TransitioningGameObjectPresent = true;
 
@@ -112,6 +116,12 @@ namespace Gamekit2D
 
             if(transitionWhen == TransitionWhen.ExternalCall)
                 TransitionInternal ();
+        }
+
+        public void TeleporterActive()
+        {
+            isActive = true;
+            onActive.Invoke();
         }
     }
 }
