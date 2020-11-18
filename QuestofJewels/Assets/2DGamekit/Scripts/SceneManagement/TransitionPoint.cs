@@ -1,6 +1,7 @@
 ﻿using Cinemachine;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering;
+using UnityEngine.Events;
 
 namespace Gamekit2D
 {
@@ -41,6 +42,8 @@ namespace Gamekit2D
         public InventoryController.InventoryChecker inventoryCheck;
     
         bool m_TransitioningGameObjectPresent;
+
+        public UnityEvent onActive;
 
         void Start ()
         {
@@ -112,6 +115,11 @@ namespace Gamekit2D
 
             if(transitionWhen == TransitionWhen.ExternalCall)
                 TransitionInternal ();
+        }
+
+        public void TeleporterActive()
+        {
+            onActive.Invoke();
         }
     }
 }
