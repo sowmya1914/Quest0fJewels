@@ -711,11 +711,12 @@ namespace Gamekit2D
 
         public void OnDie()
         {
-            ScoreSystemControl.ResetScore();
+            //ScoreSystemControl.ResetScore();
             m_Animator.SetTrigger(m_HashDeadPara);
 
             //QOJ if you want the player spawn at check point, uncomment this
             StartCoroutine(DieRespawnCoroutine(true, true));
+            Timer.Instance.DieOnce();
             //Otherwise go this
             //StartCoroutine(DieRespawnCoroutine(true, false));
         }

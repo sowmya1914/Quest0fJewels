@@ -46,7 +46,7 @@ namespace Gamekit2D
                 throw new UnityException("There cannot be more than one PlayerInput script.  The instances are " + s_Instance.name + " and " + name + ".");
         
             PersistentDataManager.RegisterPersister(this);
-            ScoreSystemControl.Instance.Setup();
+            //ScoreSystemControl.Instance.Setup();
             RangedAttack.Disable();
         }
 
@@ -89,6 +89,7 @@ namespace Gamekit2D
             GainControl(Vertical);
             GainControl(AngleShot);
             Debug.Log("control gain");
+            Timer.Instance.setPause(!m_HaveControl);
         }
 
         public override void ReleaseControl(bool resetValues = true)
@@ -104,6 +105,7 @@ namespace Gamekit2D
             ReleaseControl(Vertical, resetValues);
             ReleaseControl(AngleShot, resetValues);
             Debug.Log("release");
+            Timer.Instance.setPause(!m_HaveControl);
         }
 
         public void DisableMeleeAttacking()

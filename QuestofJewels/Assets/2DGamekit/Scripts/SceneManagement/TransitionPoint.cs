@@ -91,7 +91,7 @@ namespace Gamekit2D
             }
         }
 
-        protected void TransitionInternal ()
+        public void TransitionInternal ()
         {
             if (requiresInventoryCheck)
             {

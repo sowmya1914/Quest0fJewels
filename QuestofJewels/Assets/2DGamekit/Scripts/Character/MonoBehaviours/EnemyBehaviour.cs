@@ -462,7 +462,7 @@ namespace Gamekit2D
 
             dieAudio.PlayRandomSound();
 
-           ScoreSystemControl.IncreaseScore(100);
+           //ScoreSystemControl.IncreaseScore(100);
             m_Dead = true;
             m_Collider.enabled = false;
 

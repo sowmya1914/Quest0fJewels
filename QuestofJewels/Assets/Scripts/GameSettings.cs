@@ -242,7 +242,7 @@ public class GameSettings : MonoBehaviour
 
     public void StartNewGame()
     {
-        
+        SceneManager.LoadScene("DragonsCutscene");
     }
 
     public void StartContinueGame()

@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/QOJ/GameScene/StartScene.unity
     guid: 6fbdc506285b8bc45a9d652fbdf2ca3a
   - enabled: 1
+    path: Assets/QOJ/GameScene/DragonsCutscene.unity
+    guid: d7aa3429c06b0f04b84adc87450e0c5a
+  - enabled: 1
     path: Assets/2DGamekit/Scenes/UI/Loading.unity
     guid: ebc4647ff02971c4ba1b207af066be4d
   - enabled: 1
