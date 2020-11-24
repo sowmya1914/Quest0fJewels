@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -27,7 +28,6 @@ public class Timer : MonoBehaviour
     {
         GameObject TimerGameObject = new GameObject("Timer");
         instance = TimerGameObject.AddComponent<Timer>();
-
         return instance;
     }
     static float CurTime;
@@ -39,7 +39,7 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     // Update is called once per frame
@@ -47,9 +47,10 @@ public class Timer : MonoBehaviour
     {
         if (!pause)
             CurTime += Time.deltaTime;
-
-        if (!TimerText) TimerText = GameObject.Find("TimerText").GetComponent<Text>();
-        if (TimerText) TimerText.text = GetTimeString();
+        if (!TimerText)
+            setText();
+        if (TimerText)
+            TimerText.text = GetTimeString();
     }
 
     public void setPause(bool b)
@@ -80,5 +81,18 @@ public class Timer : MonoBehaviour
         if(min >0)
             return "Time : " + min.ToString() + " : "+ temp.ToString("00.00") + "\nDeath : " + DeathCount.ToString();
         return "Time : " + CurTime.ToString("0.00") + "\nDeath : " + DeathCount.ToString();
+    }
+
+    public void setText()
+    {
+        TimerText = GameObject.Find("TimerText").GetComponent<Text>();
+        
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("OnSceneLoaded: " + scene.name);
+        if(scene.buildIndex > 2)
+            setText();
     }
 }

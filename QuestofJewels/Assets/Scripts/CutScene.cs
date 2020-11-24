@@ -15,10 +15,19 @@ public class CutScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ulong frame = player.frameCount - 1;
+        if (player.frame == (long)frame)
         if (player.frame > 0 && !player.isPlaying)
         {
-            Timer.Instance.Reset();
-            GetComponent<Gamekit2D.TransitionPoint>().TransitionInternal();
+            NextScene();
         }
+        if (Input.GetKeyDown(KeyCode.Space))
+            NextScene();
+    }
+
+    public void NextScene()
+    {
+        Timer.Instance.Reset();
+        GetComponent<Gamekit2D.TransitionPoint>().TransitionInternal();
     }
 }
