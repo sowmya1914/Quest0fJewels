@@ -9,6 +9,7 @@ public class CutScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Gamekit2D.BackgroundMusicPlayer.Instance.Stop();
         player = GetComponent<VideoPlayer>();
     }
 
@@ -29,5 +30,6 @@ public class CutScene : MonoBehaviour
     {
         Timer.Instance.Reset();
         GetComponent<Gamekit2D.TransitionPoint>().TransitionInternal();
+        Gamekit2D.BackgroundMusicPlayer.Instance.Play();
     }
 }

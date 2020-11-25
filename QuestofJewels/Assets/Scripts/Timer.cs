@@ -33,7 +33,7 @@ public class Timer : MonoBehaviour
     static float CurTime;
     static int DeathCount;
 
-    bool pause;
+    static bool pause;
 
     Text TimerText;
     // Start is called before the first frame update
@@ -76,23 +76,80 @@ public class Timer : MonoBehaviour
         while (temp >= 60)
         {
             temp -= 60;
-            min ++;
+            min++;
         }
-        if(min >0)
-            return "Time : " + min.ToString() + " : "+ temp.ToString("00.00") + "\nDeath : " + DeathCount.ToString();
+        if (min > 0)
+            return "Time : " + min.ToString() + " : " + temp.ToString("00.00") + "\nDeath : " + DeathCount.ToString();
         return "Time : " + CurTime.ToString("0.00") + "\nDeath : " + DeathCount.ToString();
+    }
+
+    public string GetTimeOnly()
+    {
+        int min = 0;
+        float temp = CurTime;
+        while (temp >= 60)
+        {
+            temp -= 60;
+            min++;
+        }
+        if (min > 0)
+            return "Time : " + min.ToString() + " : " + temp.ToString("00.00");
+        return "Time : " + CurTime.ToString("0.00");
+    }
+
+    public string GetDeathOnly()
+    {
+        return "Death : " + DeathCount.ToString();
     }
 
     public void setText()
     {
         TimerText = GameObject.Find("TimerText").GetComponent<Text>();
-        
+
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Debug.Log("OnSceneLoaded: " + scene.name);
-        if(scene.buildIndex > 2)
+        if (scene.buildIndex > 2)
             setText();
+    }
+
+    public bool BestTime()
+    {
+        if (!PlayerPrefs.HasKey("Time"))
+        {
+            PlayerPrefs.SetFloat("Time", CurTime);
+            return true;
+        }
+        else
+        {
+            if (CurTime < PlayerPrefs.GetFloat("Time"))
+            {
+                PlayerPrefs.SetFloat("Time", CurTime);
+                return true;
+            }
+            else
+                return false;
+        }
+    }
+
+    public bool BestDeath()
+    {
+        if (!PlayerPrefs.HasKey("Death"))
+        {
+            PlayerPrefs.SetInt("Death", DeathCount);
+            return true;
+        }
+        else
+        {
+            if (DeathCount < PlayerPrefs.GetInt("Death"))
+            {
+                PlayerPrefs.SetInt("Death", DeathCount);
+                return true;
+            }
+            else
+                return false;
+        }
     }
 }

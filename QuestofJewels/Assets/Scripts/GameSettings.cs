@@ -70,7 +70,7 @@ public class GameSettings : MonoBehaviour
         FS.isOn = Screen.fullScreen;
 
         ///KeyBind
-        KeybindsSetup();
+        //KeybindsSetup();
     }
 
     private void OnGUI()
