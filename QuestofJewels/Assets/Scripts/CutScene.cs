@@ -28,6 +28,7 @@ public class CutScene : MonoBehaviour
 
     public void NextScene()
     {
+        player.Stop();
         Timer.Instance.Reset();
         GetComponent<Gamekit2D.TransitionPoint>().TransitionInternal();
         Gamekit2D.BackgroundMusicPlayer.Instance.Play();
