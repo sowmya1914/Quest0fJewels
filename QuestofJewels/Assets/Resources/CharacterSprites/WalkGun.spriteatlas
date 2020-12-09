@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WalkGun
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 20aec4b62e1989e40974f6f1ce87443e, type: 3}
+    totalSpriteSurfaceArea: 39433408
+    bindAsDefault: 1
+    storedHash:
+      serializedVersion: 2
+      Hash: 00000000000000000000000000000000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: d043c1003265e734d8d5beb2cd134e2d, type: 3}
+  - {fileID: 21300000, guid: f264b9a0c52a77b498007c4e0fa49bd0, type: 3}
+  - {fileID: 21300000, guid: 3f85caa043d243f48ba556be6bbd93d8, type: 3}
+  - {fileID: 21300000, guid: c565bb9396f42054599d6a96c88874f3, type: 3}
+  - {fileID: 21300000, guid: 7ac25ce50878c10408b9245253af8540, type: 3}
+  - {fileID: 21300000, guid: a350be16da02356458143e5df0bb68a9, type: 3}
+  - {fileID: 21300000, guid: ec862c27bc5ce364c8c3b4611e509e2d, type: 3}
+  - {fileID: 21300000, guid: d9262d477ca14db4b981d8e6da060e4f, type: 3}
+  - {fileID: 21300000, guid: 33fcb69749efb50489e5590e9a45bce6, type: 3}
+  - {fileID: 21300000, guid: fcb019d747b4b4842ba06700154db9c1, type: 3}
+  - {fileID: 21300000, guid: e1e59788bb82ebe4795a6a0eae31b190, type: 3}
+  - {fileID: 21300000, guid: 855d923ad220e3940aa12fd84b6842ba, type: 3}
+  - {fileID: 21300000, guid: c4d10ddcf0c05f144bedba7e2003f6bb, type: 3}
+  - {fileID: 21300000, guid: 7ddfc3fe3bf224a4fb4bc5f443795789, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Animations_walk_13
+  - Animations_walk_04
+  - Animations_walk_12
+  - Animations_walk_01
+  - Animations_walk_05
+  - Animations_walk_09
+  - Animations_walk_10
+  - Animations_walk_11
+  - Animations_walk_02
+  - Animations_walk_07
+  - Animations_walk_08
+  - Animations_walk_06
+  - Animations_walk_03
+  - Animations_walk_00
+  m_Tag: WalkGun
+  m_IsVariant: 0

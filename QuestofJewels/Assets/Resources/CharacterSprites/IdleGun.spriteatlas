@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: IdleGun
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 1e8ffd11807cbbf48a19a1b66895fc63, type: 3}
+    totalSpriteSurfaceArea: 24307712
+    bindAsDefault: 1
+    storedHash:
+      serializedVersion: 2
+      Hash: 00000000000000000000000000000000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: dea7a32131fd7b94b8341deec950f87d, type: 3}
+  - {fileID: 21300000, guid: 654c0f22ec5970646b5dbbf147d247fb, type: 3}
+  - {fileID: 21300000, guid: 2c701452bd5631b41abbf6144f805a65, type: 3}
+  - {fileID: 21300000, guid: 6b5806b3e5cb8c741afb9f5a4e9b6dbc, type: 3}
+  - {fileID: 21300000, guid: 563da8b3b1e41534ebb58e5a650c74fb, type: 3}
+  - {fileID: 21300000, guid: e6e51e979bfa4be4490c3ca5818b84d7, type: 3}
+  - {fileID: 21300000, guid: 6d236709e6c10dc4892f29b20fa71a51, type: 3}
+  - {fileID: 21300000, guid: 5ccf554aaeaeb3444b324838af5595ca, type: 3}
+  - {fileID: 21300000, guid: fa40508b0b467934082e37fa1e009ed8, type: 3}
+  - {fileID: 21300000, guid: e14865ebd2632304d8db928e12de6ad4, type: 3}
+  - {fileID: 21300000, guid: df3cc6cc64952894180c7aae8429d993, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Animations_IdleGUN_01
+  - Animations_IdleGUN_04
+  - Animations_IdleGUN_10
+  - Animations_IdleGUN_02
+  - Animations_IdleGUN_07
+  - Animations_IdleGUN_05
+  - Animations_IdleGUN_09
+  - Animations_IdleGUN_03
+  - Animations_IdleGUN_08
+  - Animations_IdleGUN_00
+  - Animations_IdleGUN_06
+  m_Tag: IdleGun
+  m_IsVariant: 0

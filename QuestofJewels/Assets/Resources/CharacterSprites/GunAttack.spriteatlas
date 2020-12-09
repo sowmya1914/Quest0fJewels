@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: GunAttack
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 504cba6f241c03f4daa0e04dad82bab1, type: 3}
+    totalSpriteSurfaceArea: 28137472
+    bindAsDefault: 1
+    storedHash:
+      serializedVersion: 2
+      Hash: 00000000000000000000000000000000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 168167b0acb14654ea2db8fdcef0725d, type: 3}
+  - {fileID: 21300000, guid: c0c803021d146e3488119d85bba4ef01, type: 3}
+  - {fileID: 21300000, guid: ef26e1236081d5147a94b5028646b819, type: 3}
+  - {fileID: 21300000, guid: 1185fb93345b6ed44994fd0281f608e9, type: 3}
+  - {fileID: 21300000, guid: ac70617421a0a7b4a80278376906696d, type: 3}
+  - {fileID: 21300000, guid: 33cd360833fee31408f7a8987786ca42, type: 3}
+  - {fileID: 21300000, guid: 52623419227d8b44ca2a4fa51bd04cee, type: 3}
+  - {fileID: 21300000, guid: 0ed8b0e96169f3945981dca6a38753f0, type: 3}
+  - {fileID: 21300000, guid: 782abbbba27907e4a9b0e74a0a38e838, type: 3}
+  - {fileID: 21300000, guid: 613bfd6dfc1040f47b5e69192e636df1, type: 3}
+  - {fileID: 21300000, guid: 590de21ebcd76b04688ceb296770df44, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Animations_GunAttack_09
+  - Animations_GunAttack_05
+  - Animations_GunAttack_08
+  - Animations_GunAttack_02
+  - Animations_GunAttack_03
+  - Animations_GunAttack_04
+  - Animations_GunAttack_10
+  - Animations_GunAttack_06
+  - Animations_GunAttack_07
+  - Animations_GunAttack_00
+  - Animations_GunAttack_01
+  m_Tag: GunAttack
+  m_IsVariant: 0

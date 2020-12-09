@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Idle
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 5a89aa1e3f27652409b507dbbf83770c, type: 3}
+    totalSpriteSurfaceArea: 15183872
+    bindAsDefault: 1
+    storedHash:
+      serializedVersion: 2
+      Hash: 00000000000000000000000000000000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 50fb0db0d43772240801dc325942b329, type: 3}
+  - {fileID: 21300000, guid: 7164a2e00f73c5c45a487eb071ac9461, type: 3}
+  - {fileID: 21300000, guid: 07829dd18a4c3d448b67129b4a9e3c09, type: 3}
+  - {fileID: 21300000, guid: 653681e1fa70fd44d97fac03595e50e5, type: 3}
+  - {fileID: 21300000, guid: 941ddbf132b05d74b9fb165b76dd0944, type: 3}
+  - {fileID: 21300000, guid: 2579d7f9b2b339d489e3f17e5fe93b50, type: 3}
+  - {fileID: 21300000, guid: f132bb8b172c5da4084821a6c5dbb625, type: 3}
+  - {fileID: 21300000, guid: ecd0f35ce724cea4ab716d6e7434a44f, type: 3}
+  - {fileID: 21300000, guid: 43bfa2dd6ce58e544b74fbbd3f997f87, type: 3}
+  - {fileID: 21300000, guid: cb6c77eebef3412418df9ea17e1a2336, type: 3}
+  - {fileID: 21300000, guid: 0dbef0df945ae4d4daf6e275980f7976, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Animations_Idle_04
+  - Animations_Idle_00
+  - Animations_Idle_07
+  - Animations_Idle_03
+  - Animations_Idle_10
+  - Animations_Idle_05
+  - Animations_Idle_06
+  - Animations_Idle_09
+  - Animations_Idle_08
+  - Animations_Idle_01
+  - Animations_Idle_02
+  m_Tag: Idle
+  m_IsVariant: 0

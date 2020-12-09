@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Push
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: a2af3c9d2d6c5f643a2259c00dc21dd5, type: 3}
+    totalSpriteSurfaceArea: 38387712
+    bindAsDefault: 1
+    storedHash:
+      serializedVersion: 2
+      Hash: 00000000000000000000000000000000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 279497401c525bc4da9b27582c1c1fc8, type: 3}
+  - {fileID: 21300000, guid: 46cba740292d594459a9e2d2095930c7, type: 3}
+  - {fileID: 21300000, guid: 2cc26cd230d9232488cd22f0db226b43, type: 3}
+  - {fileID: 21300000, guid: 04200e8559d6ece4391e53a7b8d54969, type: 3}
+  - {fileID: 21300000, guid: fa4831c8eb0a8334889034071a452aa4, type: 3}
+  - {fileID: 21300000, guid: 4712a1c99c991bd44a3b9def2259547c, type: 3}
+  - {fileID: 21300000, guid: 017f342a3a846254c86c93db77550d0f, type: 3}
+  - {fileID: 21300000, guid: 4214d0ba177cf124c8ffc7e66aaea2a2, type: 3}
+  - {fileID: 21300000, guid: fdb70bdbaf70e30419251f7586479d61, type: 3}
+  - {fileID: 21300000, guid: d51187ac3391583498f52742befe7017, type: 3}
+  - {fileID: 21300000, guid: 70d43a3dd294b2d4c9080b24380ca92a, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Animations_PUSH_01
+  - Animations_PUSH_04
+  - Animations_PUSH_07
+  - Animations_PUSH_10
+  - Animations_PUSH_03
+  - Animations_PUSH_02
+  - Animations_PUSH_08
+  - Animations_PUSH_00
+  - Animations_PUSH_09
+  - Animations_PUSH_06
+  - Animations_PUSH_05
+  m_Tag: Push
+  m_IsVariant: 0

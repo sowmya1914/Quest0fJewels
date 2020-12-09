@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RunGun1
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 7e9bcf8b9f2a0724b88e5ba209845ce8, type: 3}
+    totalSpriteSurfaceArea: 71487381
+    bindAsDefault: 1
+    storedHash:
+      serializedVersion: 2
+      Hash: 00000000000000000000000000000000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: e403b191fc7f96846a09db492e5b4fb1, type: 3}
+  - {fileID: 21300000, guid: b57c05026e386194c813ba4b7ea66dd1, type: 3}
+  - {fileID: 21300000, guid: 8a512fa34886a204aa08303d4e6ab5de, type: 3}
+  - {fileID: 21300000, guid: 3bbb3104d7448a44d950361e78e0d204, type: 3}
+  - {fileID: 21300000, guid: ef32cb64ea30c0e48b0a8cf872d35bba, type: 3}
+  - {fileID: 21300000, guid: 8d21aa74de8a20747b65afba91cb36bc, type: 3}
+  - {fileID: 21300000, guid: 2bf23df5e71006943ace542bebbb1bec, type: 3}
+  - {fileID: 21300000, guid: 366431e6f825e8540acc228fade15eba, type: 3}
+  - {fileID: 21300000, guid: d56bec5870b18804aa332e0ca0f749c0, type: 3}
+  - {fileID: 21300000, guid: 2b920309f1a3c1747a5d06b37cb80aa8, type: 3}
+  - {fileID: 21300000, guid: 22f779b9a8d6da54dbe3e677922e86dd, type: 3}
+  - {fileID: 21300000, guid: 907d1eeadb70ae847a7dca6cea259e35, type: 3}
+  - {fileID: 21300000, guid: ec82e20bb10d06c478f3b2055d7e0fd7, type: 3}
+  - {fileID: 21300000, guid: f601577b92fcf584b8317518c030e13a, type: 3}
+  - {fileID: 21300000, guid: 451c759bc9c44a14e8dc84baba4df71f, type: 3}
+  - {fileID: 21300000, guid: d2e984fbba8036d47b3260526475cdb8, type: 3}
+  - {fileID: 21300000, guid: b552b12c6702856419b629d4c6140e25, type: 3}
+  - {fileID: 21300000, guid: ebb2135e1273eaf4bb32eec882f4186e, type: 3}
+  - {fileID: 21300000, guid: b4c745cfcc2ef4140bae9aceec7adff3, type: 3}
+  - {fileID: 21300000, guid: 9816b7ef58cd73549845593f69209b61, type: 3}
+  - {fileID: 21300000, guid: 1a119bff6d118a9438369f2ef406a3db, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Animations_RunGun_01
+  - Animations_RunGun_06
+  - Animations_RunGun_11
+  - Animations_RunGun_02
+  - Animations_RunGun_00
+  - Animations_RunGun_16
+  - Animations_RunGun_09
+  - Animations_RunGun_13
+  - Animations_RunGun_12
+  - Animations_RunGun_17
+  - Animations_RunGun_08
+  - Animations_RunGun_10
+  - Animations_RunGun_19
+  - Animations_RunGun_15
+  - Animations_RunGun_03
+  - Animations_RunGun_07
+  - Animations_RunGun_05
+  - Animations_RunGun_18
+  - Animations_RunGun_14
+  - Animations_RunGun_04
+  - Animations_RunGun_20
+  m_Tag: RunGun1
+  m_IsVariant: 0

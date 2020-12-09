@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: StickAttack
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 8278e99d53b432d40898f0147659252a, type: 3}
+    totalSpriteSurfaceArea: 55265280
+    bindAsDefault: 1
+    storedHash:
+      serializedVersion: 2
+      Hash: 00000000000000000000000000000000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: a78073a0d71b0f447ba6679d5f2b636c, type: 3}
+  - {fileID: 21300000, guid: 6520d1e0ea572a0459c59fd30044e572, type: 3}
+  - {fileID: 21300000, guid: 9e910211665d3f04fb41b5a4a593bc58, type: 3}
+  - {fileID: 21300000, guid: f0a931e147863ff42bf8c42e0a139358, type: 3}
+  - {fileID: 21300000, guid: 35cf8772d14ccd74aa398f7c8432c3c2, type: 3}
+  - {fileID: 21300000, guid: 8ce3dd144099549428c368e9ba1830df, type: 3}
+  - {fileID: 21300000, guid: 91e3c344ebaaf6c44856f5ddbd40009c, type: 3}
+  - {fileID: 21300000, guid: ff27eb150e890264d914103b61a23894, type: 3}
+  - {fileID: 21300000, guid: 77c7b726d2cb11341b4cac0bf9513a28, type: 3}
+  - {fileID: 21300000, guid: e2ac0ca64e8af7b4f92b2f4923210e75, type: 3}
+  - {fileID: 21300000, guid: a4d321d6f3e16a541aa4e78c4c4f0ae6, type: 3}
+  - {fileID: 21300000, guid: 2fa414072e855e041859aec1cba5f18c, type: 3}
+  - {fileID: 21300000, guid: 9b7aa6c9fcd4bf6418d0403bf10dd3a1, type: 3}
+  - {fileID: 21300000, guid: c3b8ffca1427003428fb0697dc5efef5, type: 3}
+  - {fileID: 21300000, guid: 3556321b4c5d6994ebc59834ac6017aa, type: 3}
+  - {fileID: 21300000, guid: a6504bab561ace04c94f0631e10d53a4, type: 3}
+  - {fileID: 21300000, guid: 31eeeb3cbafa76f4e939be7c37e0a21b, type: 3}
+  - {fileID: 21300000, guid: 1f403d7d4ec0cfc40aaaeb4ba239a638, type: 3}
+  - {fileID: 21300000, guid: 5f65a31e489962f479d10f5939897f52, type: 3}
+  - {fileID: 21300000, guid: e2f84f4e2170e3a479745512e97b3f23, type: 3}
+  - {fileID: 21300000, guid: 154582aefcd3949419a715744ff19b24, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Animations_StickAttack_16
+  - Animations_StickAttack_11
+  - Animations_StickAttack_05
+  - Animations_StickAttack_15
+  - Animations_StickAttack_00
+  - Animations_StickAttack_06
+  - Animations_StickAttack_14
+  - Animations_StickAttack_10
+  - Animations_StickAttack_13
+  - Animations_StickAttack_07
+  - Animations_StickAttack_19
+  - Animations_StickAttack_03
+  - Animations_StickAttack_08
+  - Animations_StickAttack_20
+  - Animations_StickAttack_01
+  - Animations_StickAttack_17
+  - Animations_StickAttack_02
+  - Animations_StickAttack_12
+  - Animations_StickAttack_04
+  - Animations_StickAttack_09
+  - Animations_StickAttack_18
+  m_Tag: StickAttack
+  m_IsVariant: 0

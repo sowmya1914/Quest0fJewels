@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CrouchWithGun
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 19a4e7c730bf17f4198425e954265cca, type: 3}
+    totalSpriteSurfaceArea: 11550720
+    bindAsDefault: 1
+    storedHash:
+      serializedVersion: 2
+      Hash: 00000000000000000000000000000000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 830962201442b5c4795bfac5ebffd107, type: 3}
+  - {fileID: 21300000, guid: bd88cc0254f726646972ca0864c9a0c0, type: 3}
+  - {fileID: 21300000, guid: ead88d9cb1b56dc48bfb128c589c1356, type: 3}
+  - {fileID: 21300000, guid: a381a6eecd0c4a0449570c0e74041960, type: 3}
+  - {fileID: 21300000, guid: e83def1f37f311a4b9568d923a011eed, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - CrouchWithGun001
+  - CrouchWithGun002
+  - CrouchWithGun004
+  - CrouchWithGun005
+  - CrouchWithGun003
+  m_Tag: CrouchWithGun
+  m_IsVariant: 0

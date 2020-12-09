@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: JumpGun
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: d74b2c1847094554ba47d7b3908a20e5, type: 3}
+    totalSpriteSurfaceArea: 34590720
+    bindAsDefault: 1
+    storedHash:
+      serializedVersion: 2
+      Hash: 00000000000000000000000000000000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 74756b01851220445b755ffb038b8e11, type: 3}
+  - {fileID: 21300000, guid: b9d2e42139c908c4e93586d1f43adf8d, type: 3}
+  - {fileID: 21300000, guid: b4eca391efa4d02439766b7b1ca1718c, type: 3}
+  - {fileID: 21300000, guid: 188c39c25a8248f4cbc893a01f0bf67a, type: 3}
+  - {fileID: 21300000, guid: 7b5610e3f10ff514e851edc1b06742e5, type: 3}
+  - {fileID: 21300000, guid: 9a43bdf338642634085ad9bea5ef132c, type: 3}
+  - {fileID: 21300000, guid: f1ec5105af1b201409d8ebe276b9449b, type: 3}
+  - {fileID: 21300000, guid: 056673d5fc7e5b648b7a56eabfde3c48, type: 3}
+  - {fileID: 21300000, guid: 7f4d4a6618b74d14eb85b0ab32f88b3c, type: 3}
+  - {fileID: 21300000, guid: b32e1a67b6daab0498ade6fd0580eebe, type: 3}
+  - {fileID: 21300000, guid: e987c1b77fe56004dba2505ed2418ae0, type: 3}
+  - {fileID: 21300000, guid: fab35068ecdc9ab4c8307d751238da26, type: 3}
+  - {fileID: 21300000, guid: f4d8a129358fbcc41a7c9d476ae2c1d1, type: 3}
+  - {fileID: 21300000, guid: e78e606c5c15ccd43b0ad931ce448f7b, type: 3}
+  - {fileID: 21300000, guid: 814bb98d2bf66c54aa796e5041eea1d1, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Animations_JUMPGUN_01
+  - Animations_JUMPGUN_00
+  - Animations_JUMPGUN_08
+  - Animations_JUMPGUN_13
+  - Animations_JUMPGUN_03
+  - Animations_JUMPGUN_06
+  - Animations_JUMPGUN_11
+  - Animations_JUMPGUN_04
+  - Animations_JUMPGUN_07
+  - Animations_JUMPGUN_05
+  - Animations_JUMPGUN_12
+  - Animations_JUMPGUN_02
+  - Animations_JUMPGUN_09
+  - Animations_JUMPGUN_14
+  - Animations_JUMPGUN_10
+  m_Tag: JumpGun
+  m_IsVariant: 0

@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Walk
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: cc008c4ae71ac814286bf05710a75256, type: 3}
+    totalSpriteSurfaceArea: 30277632
+    bindAsDefault: 1
+    storedHash:
+      serializedVersion: 2
+      Hash: 00000000000000000000000000000000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 32494f40450cf1e4a88bb7fc4d07c426, type: 3}
+  - {fileID: 21300000, guid: 61452eb186d5df94f916f92776601493, type: 3}
+  - {fileID: 21300000, guid: 39fd66162ba33644e9d23dbab24e3e83, type: 3}
+  - {fileID: 21300000, guid: 20c44547e14390a4caf5d879ed8c9164, type: 3}
+  - {fileID: 21300000, guid: 526a7567395601b4783753912928a48d, type: 3}
+  - {fileID: 21300000, guid: c541cb489cbdba44ca04389532c8fd1b, type: 3}
+  - {fileID: 21300000, guid: dc368fc8065ad9e46a0d6ef184e98433, type: 3}
+  - {fileID: 21300000, guid: c335c9acf3356be4190c6b15cc6c032b, type: 3}
+  - {fileID: 21300000, guid: 65c4d7bc68b921a4e8eff0711068e183, type: 3}
+  - {fileID: 21300000, guid: 6658a06e3304f2d4abeb6b027f553315, type: 3}
+  - {fileID: 21300000, guid: 2afc728e0b8760a4fbda860e8ced43e6, type: 3}
+  - {fileID: 21300000, guid: 2f5420ee67ada8c42a8d136601bcc4e6, type: 3}
+  - {fileID: 21300000, guid: 4035e78fa1165ea4dbf5e19588cfb966, type: 3}
+  - {fileID: 21300000, guid: 967e9a9f9eddedf479d76f13f75eda09, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - walk_09
+  - walk_13
+  - walk_12
+  - walk_05
+  - walk_10
+  - walk_02
+  - walk_08
+  - walk_01
+  - walk_00
+  - walk_11
+  - walk_04
+  - walk_07
+  - walk_06
+  - walk_03
+  m_Tag: Walk
+  m_IsVariant: 0
