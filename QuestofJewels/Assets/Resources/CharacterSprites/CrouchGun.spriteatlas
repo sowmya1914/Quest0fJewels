@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CrouchGun
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: ed8530c6377bcfa4eb3bae2b935c01a1, type: 3}
+    totalSpriteSurfaceArea: 31178752
+    bindAsDefault: 1
+    storedHash:
+      serializedVersion: 2
+      Hash: 00000000000000000000000000000000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 1b3a7a001e7839b448c99f54b40bfb44, type: 3}
+  - {fileID: 21300000, guid: 2b1eea017675fe94e8a8a049d97575ad, type: 3}
+  - {fileID: 21300000, guid: 700f19057deffd14383395f94ec75517, type: 3}
+  - {fileID: 21300000, guid: ea747376aea20774a9b8855728e45aee, type: 3}
+  - {fileID: 21300000, guid: 35fa1c47703f57c4ba0d2f7a42b04832, type: 3}
+  - {fileID: 21300000, guid: 7a81e9a9c62956241b5636cdb417cc90, type: 3}
+  - {fileID: 21300000, guid: 8567237af9b42a44093af470e8242e0c, type: 3}
+  - {fileID: 21300000, guid: 228100fb8f960e64cbf599c3476bb124, type: 3}
+  - {fileID: 21300000, guid: 0e1e02bcf9ea8bc4a8fa085e4a7e6a7d, type: 3}
+  - {fileID: 21300000, guid: 10225b1ff4cf81043ba8f42ce951a911, type: 3}
+  - {fileID: 21300000, guid: 39300bafe982934488c826c1012485d5, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Animations_CrouchGun_04
+  - Animations_CrouchGun_07
+  - Animations_CrouchGun_00
+  - Animations_CrouchGun_06
+  - Animations_CrouchGun_02
+  - Animations_CrouchGun_01
+  - Animations_CrouchGun_05
+  - Animations_CrouchGun_09
+  - Animations_CrouchGun_03
+  - Animations_CrouchGun_08
+  - Animations_CrouchGun_10
+  m_Tag: CrouchGun
+  m_IsVariant: 0
