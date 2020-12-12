@@ -43,6 +43,7 @@ namespace Gamekit2D
                 schedule();
                 schedule = null;
             }
+            Debug.Log("TimeScale : " + Time.timeScale);
         }
 
         void Awake()

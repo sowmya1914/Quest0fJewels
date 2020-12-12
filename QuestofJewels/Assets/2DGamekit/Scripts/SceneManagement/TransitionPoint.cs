@@ -46,6 +46,8 @@ namespace Gamekit2D
         public bool isActive = true;
         public UnityEvent onActive;
 
+        public bool fading = true;
+
         void Start ()
         {
             if (transitionWhen == TransitionWhen.ExternalCall)

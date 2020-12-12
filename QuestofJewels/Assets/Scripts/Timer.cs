@@ -39,7 +39,7 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        //SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     // Update is called once per frame
@@ -47,8 +47,7 @@ public class Timer : MonoBehaviour
     {
         if (!pause)
             CurTime += Time.deltaTime;
-        if (!TimerText)
-            setText();
+
         if (TimerText)
             TimerText.text = GetTimeString();
     }

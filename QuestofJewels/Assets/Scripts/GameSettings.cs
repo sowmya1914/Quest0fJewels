@@ -272,6 +272,7 @@ public class GameSettings : MonoBehaviour
     }
     public void ExitPause()
     {
-        PlayerCharacter.PlayerInstance.Unpause();
+        Time.timeScale = 1;
+        //PlayerCharacter.PlayerInstance.Unpause();
     }
 }

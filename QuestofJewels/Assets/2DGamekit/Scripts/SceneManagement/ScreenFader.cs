@@ -74,8 +74,14 @@ namespace Gamekit2D
             float fadeSpeed = Mathf.Abs(canvasGroup.alpha - finalAlpha) / fadeDuration;
             while (!Mathf.Approximately(canvasGroup.alpha, finalAlpha))
             {
+                float speed = Time.deltaTime;
+                if (speed <= 0)
+                {
+                    Debug.Log("delta time = 0");
+                    speed = 0.02f;
+                }
                 canvasGroup.alpha = Mathf.MoveTowards(canvasGroup.alpha, finalAlpha,
-                    fadeSpeed * Time.deltaTime);
+                    fadeSpeed * speed);
                 yield return null;
             }
             canvasGroup.alpha = finalAlpha;

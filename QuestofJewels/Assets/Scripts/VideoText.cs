@@ -33,6 +33,11 @@ public class VideoText : MonoBehaviour
     }
     void Start()
     {
+
+    }
+
+    public void Playtext()
+    {
         StartCoroutine(PlayText());
     }
 
