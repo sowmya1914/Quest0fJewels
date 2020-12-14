@@ -20175,7 +20175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e26d33c639fd9e49bafb44633ea5fb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 5
   offset: {x: 0, y: 0}
   size: {x: 1, y: 1}
   offsetBasedOnSpriteFacing: 0
