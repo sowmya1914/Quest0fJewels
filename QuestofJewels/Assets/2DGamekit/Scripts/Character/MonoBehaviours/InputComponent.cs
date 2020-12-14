@@ -150,29 +150,12 @@ namespace Gamekit2D
 
             public void Enable()
             {
-
-                if (m_Enabled == false)
-                {
-                    m_Enabled = true;
-
-                }
-                else
-                {
-                    Disable();
-                }
+                m_Enabled = true;
             }
 
             public void Disable()
             {
-                if (m_Enabled == true)
-                {
-                    m_Enabled = false;
-
-                }
-                else
-                {
-                    Enable();
-                }
+                m_Enabled = false;
             }
 
             public void GainControl()

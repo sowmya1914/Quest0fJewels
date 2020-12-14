@@ -111,7 +111,6 @@ namespace Gamekit2D
                 m_PlayerInput = FindObjectOfType<PlayerInput>();
             m_PlayerInput.ReleaseControl(resetInputValues);
             ScreenFader.Instance.setLoadingBar(0);
-            Debug.Log("test : " + Time.deltaTime);
             if(fading)
                 yield return StartCoroutine(ScreenFader.FadeSceneOut(ScreenFader.FadeType.Loading));
             PersistentDataManager.ClearPersisters();
@@ -123,7 +122,6 @@ namespace Gamekit2D
                 ScreenFader.Instance.setLoadingBar(progress);
                 yield return null;
             }
-            Debug.Log(operation.isDone);
             //yield return SceneManager.LoadSceneAsync(newSceneName);
             m_PlayerInput = FindObjectOfType<PlayerInput>();
             m_PlayerInput.ReleaseControl(resetInputValues);

@@ -22,6 +22,7 @@ public class GameSettings : MonoBehaviour
 
     Resolution[] resolutions;
     Dropdown resolutionDropdown;
+    Dropdown qualityDropdown;
     Toggle FS;
 
     GameObject currentkey;
@@ -31,6 +32,7 @@ public class GameSettings : MonoBehaviour
     {
         ///Init
         resolutionDropdown = transform.Find("Options/Graphics Panel/Dropdown").GetComponent<Dropdown>();
+        qualityDropdown = transform.Find("Options/Graphics Panel/QualityDropdown").GetComponent<Dropdown>();
 
         sMaster = transform.Find("Options/Sound Panel/Master").gameObject.GetComponent<Slider>();
         sSfx = transform.Find("Options/Sound Panel/SFx").gameObject.GetComponent<Slider>();
@@ -69,20 +71,35 @@ public class GameSettings : MonoBehaviour
 
         FS.isOn = Screen.fullScreen;
 
+        ///Quality
+        string[] names = QualitySettings.names;
+        qualityDropdown.ClearOptions();
+        options.Clear();
+        for (int i = 0; i < names.Length; i++)
+        {
+            string option = names[i];
+            options.Add(option);
+        }
+        qualityDropdown.AddOptions(options);
+        qualityDropdown.value = QualitySettings.GetQualityLevel();
+        qualityDropdown.RefreshShownValue();
+
+
+
         ///KeyBind
         //KeybindsSetup();
     }
 
     private void OnGUI()
     {
-        if (currentkey != null)
-        {
-            Event e = Event.current;
-            if (e.isKey)
-            {
-                ChangeTheKey(currentkey.name, e.keyCode);
-            }
-        }
+        //if (currentkey != null)
+        //{
+        //    Event e = Event.current;
+        //    if (e.isKey)
+        //    {
+        //        ChangeTheKey(currentkey.name, e.keyCode);
+        //    }
+        //}
     }
     
     #region Audio
@@ -165,6 +182,11 @@ public class GameSettings : MonoBehaviour
     public void SetFullScreen(bool b)
     {
         Screen.fullScreen = b;
+    }
+
+    public void SetQuality(int index)
+    {
+        QualitySettings.SetQualityLevel(index, true);
     }
     #endregion
     #region KeyBinding

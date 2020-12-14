@@ -914,11 +914,7 @@ MonoBehaviour:
   RangedAttack:
     key: 107
     controllerButton: 3
-    m_Enabled: 1
-  SwitchAttack:
-    key: 111
-    controllerButton: 2
-    m_Enabled: 1
+    m_Enabled: 0
   Jump:
     key: 32
     controllerButton: 1
@@ -936,7 +932,7 @@ MonoBehaviour:
     negative: 274
     controllerAxis: 6
   dataSettings:
-    dataTag: 15a0bad4-774e-481d-b0b3-5f445d31d889
+    dataTag: PlayerInput
     persistenceType: 3
 --- !u!4 &596709151
 Transform:

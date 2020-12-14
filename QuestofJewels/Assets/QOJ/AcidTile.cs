@@ -13,6 +13,7 @@ public class AcidTile : Damager
             {
                 pos = getPos(other);
                 OnDamageableHit.Invoke(this, damageable);
+                damageable.DisableInvulnerability();
                 damageable.TakeDamage(this, ignoreInvincibility);
                 if (disableDamageAfterHit)
                     DisableDamage();
