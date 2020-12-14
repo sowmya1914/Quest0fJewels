@@ -1955,11 +1955,6 @@ PrefabInstance:
       propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8099397438763752055, guid: 12c2177bf06bbee44b65f5e185b2216f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8098245887496803215, guid: 12c2177bf06bbee44b65f5e185b2216f,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1968,6 +1963,11 @@ PrefabInstance:
     - target: {fileID: 8098245887496803215, guid: 12c2177bf06bbee44b65f5e185b2216f,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099397438763752055, guid: 12c2177bf06bbee44b65f5e185b2216f,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -9195,6 +9195,11 @@ PrefabInstance:
         type: 3}
       propertyPath: OnDie.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318706792785328538, guid: 65108bf973264b34b9dbc73e35da9eec,
+        type: 3}
+      propertyPath: RangedAttack.m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65108bf973264b34b9dbc73e35da9eec, type: 3}

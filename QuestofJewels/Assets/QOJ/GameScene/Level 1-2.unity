@@ -84783,6 +84783,11 @@ PrefabInstance:
       propertyPath: OnHealthSet.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: UpdateHealth
       objectReference: {fileID: 0}
+    - target: {fileID: 3318706792785328538, guid: 65108bf973264b34b9dbc73e35da9eec,
+        type: 3}
+      propertyPath: RangedAttack.m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65108bf973264b34b9dbc73e35da9eec, type: 3}
 --- !u!1 &2102064855 stripped

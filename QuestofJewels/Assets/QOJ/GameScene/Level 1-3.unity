@@ -10764,6 +10764,11 @@ PrefabInstance:
       propertyPath: OnHealthSet.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: UpdateHealth
       objectReference: {fileID: 0}
+    - target: {fileID: 3318706792785328538, guid: 65108bf973264b34b9dbc73e35da9eec,
+        type: 3}
+      propertyPath: RangedAttack.m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65108bf973264b34b9dbc73e35da9eec, type: 3}
 --- !u!1 &322990248 stripped
@@ -21074,6 +21079,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8763235820350738282, guid: 75eca0f4dfa2eeb4e85d5fd97d192952,
+        type: 3}
+      propertyPath: offset.x
+      value: -0.007497236
+      objectReference: {fileID: 0}
+    - target: {fileID: 8763235820350738282, guid: 75eca0f4dfa2eeb4e85d5fd97d192952,
+        type: 3}
+      propertyPath: size.x
+      value: 0.78671086
+      objectReference: {fileID: 0}
     - target: {fileID: 8706484897955917156, guid: 75eca0f4dfa2eeb4e85d5fd97d192952,
         type: 3}
       propertyPath: m_Offset.y
@@ -21093,16 +21108,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 0.79171443
-      objectReference: {fileID: 0}
-    - target: {fileID: 8763235820350738282, guid: 75eca0f4dfa2eeb4e85d5fd97d192952,
-        type: 3}
-      propertyPath: offset.x
-      value: -0.007497236
-      objectReference: {fileID: 0}
-    - target: {fileID: 8763235820350738282, guid: 75eca0f4dfa2eeb4e85d5fd97d192952,
-        type: 3}
-      propertyPath: size.x
-      value: 0.78671086
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75eca0f4dfa2eeb4e85d5fd97d192952, type: 3}
