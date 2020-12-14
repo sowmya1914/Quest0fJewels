@@ -761,12 +761,13 @@ namespace Gamekit2D
 
         public bool CheckForSwitchAttackInput()
         {
-            if (PlayerInput.Instance.SwitchAttack.Enabled == false)
-            {
-                PlayerInput.Instance.SwitchAttack.Enable();
-                return false;
-            }
-            return PlayerInput.Instance.SwitchAttack.Down;
+            //if (PlayerInput.Instance.SwitchAttack.Enabled == false)
+            //{
+            //    PlayerInput.Instance.SwitchAttack.Enable();
+            //    return false;
+            //}
+            //return PlayerInput.Instance.SwitchAttack.Down;
+            return false;
         }
 
         public void SwitchAttack()
@@ -782,7 +783,7 @@ namespace Gamekit2D
                 PlayerInput.Instance.RangedAttack.Disable();
                 PlayerInput.Instance.MeleeAttack.Enable();
             }
-            PlayerInput.Instance.SwitchAttack.Disable();
+            //PlayerInput.Instance.SwitchAttack.Disable();
         }
 
         public void EnableMeleeAttack()

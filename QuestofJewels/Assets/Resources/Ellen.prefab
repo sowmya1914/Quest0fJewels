@@ -348,11 +348,7 @@ MonoBehaviour:
   RangedAttack:
     key: 107
     controllerButton: 10
-    m_Enabled: 1
-  SwitchAttack:
-    key: 111
-    controllerButton: 2
-    m_Enabled: 1
+    m_Enabled: 0
   Jump:
     key: 32
     controllerButton: 1
@@ -1233,7 +1229,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 88cf4c38c64a7b84f88a54036e698825, type: 3}
   - {fileID: 8300000, guid: 234b586e812e70b419affbe33e30dcfe, type: 3}
   overrides:
-  - tile: {fileID: 11400000, guid: 1032823b40fd7ef4ea6f06b3e6c5c860, type: 2}
+  - tile: {fileID: 0}
     clips:
     - {fileID: 8300000, guid: 4d02d075426b22b44bbdb5c1fd065ec7, type: 3}
     - {fileID: 8300000, guid: fd7c2de844921164b88f6fd8ac28d8d4, type: 3}

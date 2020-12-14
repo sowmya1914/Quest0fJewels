@@ -18,7 +18,7 @@ namespace Gamekit2D
         public InputButton Interact = new InputButton(KeyCode.E, XboxControllerButtons.Y);
         public InputButton MeleeAttack = new InputButton(KeyCode.K, XboxControllerButtons.X);
         public InputButton RangedAttack = new InputButton(KeyCode.K, XboxControllerButtons.X);
-        public InputButton SwitchAttack = new InputButton(KeyCode.O, XboxControllerButtons.B);
+        //public InputButton SwitchAttack = new InputButton(KeyCode.O, XboxControllerButtons.B);
         public InputButton Jump = new InputButton(KeyCode.Space, XboxControllerButtons.A);
         public InputAxis Horizontal = new InputAxis(KeyCode.D, KeyCode.A, XboxControllerAxes.LeftstickHorizontal);
         public InputAxis Vertical = new InputAxis(KeyCode.W, KeyCode.S, XboxControllerAxes.LeftstickVertical);
@@ -62,7 +62,7 @@ namespace Gamekit2D
             Pause.Get(fixedUpdateHappened, inputType);
             Interact.Get(fixedUpdateHappened, inputType);
             MeleeAttack.Get(fixedUpdateHappened, inputType);
-            SwitchAttack.Get(fixedUpdateHappened, inputType);
+            //SwitchAttack.Get(fixedUpdateHappened, inputType);
             RangedAttack.Get(fixedUpdateHappened, inputType);
             Jump.Get(fixedUpdateHappened, inputType);
             Horizontal.Get(inputType);
@@ -83,7 +83,7 @@ namespace Gamekit2D
             GainControl(Interact);
             GainControl(MeleeAttack);
             GainControl(RangedAttack);
-            GainControl(SwitchAttack);
+            //GainControl(SwitchAttack);
             GainControl(Jump);
             GainControl(Horizontal);
             GainControl(Vertical);
