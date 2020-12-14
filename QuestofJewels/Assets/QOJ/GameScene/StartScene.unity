@@ -263,7 +263,7 @@ MonoBehaviour:
     controllerButton: 3
     m_Enabled: 1
   RangedAttack:
-    key: 111
+    key: 296
     controllerButton: 2
     m_Enabled: 0
   Jump:
@@ -1443,18 +1443,7 @@ MonoBehaviour:
   transitioningGameObject: {fileID: 1036277313}
   OnReachDestination:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5558390}
-        m_MethodName: ExitPause
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!4 &255738441
 Transform:
   m_ObjectHideFlags: 0

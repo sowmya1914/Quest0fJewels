@@ -145,5 +145,10 @@ namespace Gamekit2D
             };
         }
 
+        public static void ClearSave()
+        {
+            Instance.m_Store.Clear();
+        }
+
     }
 }

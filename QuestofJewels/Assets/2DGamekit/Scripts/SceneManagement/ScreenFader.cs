@@ -77,7 +77,6 @@ namespace Gamekit2D
                 float speed = Time.deltaTime;
                 if (speed <= 0)
                 {
-                    Debug.Log("delta time = 0");
                     speed = 0.02f;
                 }
                 canvasGroup.alpha = Mathf.MoveTowards(canvasGroup.alpha, finalAlpha,

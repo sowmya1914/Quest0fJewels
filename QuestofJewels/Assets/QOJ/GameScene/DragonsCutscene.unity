@@ -912,8 +912,8 @@ MonoBehaviour:
     controllerButton: 3
     m_Enabled: 1
   RangedAttack:
-    key: 107
-    controllerButton: 3
+    key: 296
+    controllerButton: 2
     m_Enabled: 0
   Jump:
     key: 32
