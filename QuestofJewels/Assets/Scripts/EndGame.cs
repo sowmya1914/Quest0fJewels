@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using Gamekit2D;
 
 public class EndGame : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class EndGame : MonoBehaviour
         Cursor.visible = true;
         IEnumerator enumerator = playText();
         StartCoroutine(enumerator);
+        FindObjectOfType<InventoryController>().Clear();
+        PersistentDataManager.ClearSave();
     }
 
     public void BacktoMain()
