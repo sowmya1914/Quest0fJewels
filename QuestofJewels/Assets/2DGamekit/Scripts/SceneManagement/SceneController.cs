@@ -181,6 +181,7 @@ namespace Gamekit2D
         {
             m_CurrentZoneScene = entrance.gameObject.scene;
             m_ZoneRestartDestinationTag = entrance.destinationTag;
+            Cursor.visible = false;
         }
 
         static IEnumerator CallWithDelay<T>(float delay, Action<T> call, T parameter)

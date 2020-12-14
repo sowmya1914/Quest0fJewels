@@ -6,11 +6,14 @@ public class SpikeLauncher : MonoBehaviour
 {
     public GameObject bullet;
     Vector3 destination;
+    [Tooltip("Bullet travel speed")]
     [Range(0.01f, 99)]
     public float bulletSpeed = 0.1f;
+    [Tooltip("How long to wait for next shot")]
     [Range(0.1f, 99)]
     public float firingRate = 0.1f;
     [Range(0, 9)]
+    [Tooltip("How long to wait before first shot")]
     public float initialWaitTimer;
     float timer = 0;
     int index;

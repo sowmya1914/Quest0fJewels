@@ -272,6 +272,7 @@ public class GameSettings : MonoBehaviour
     }
     public void ExitPause()
     {
+        Cursor.visible = true;
         Time.timeScale = 1;
         //PlayerCharacter.PlayerInstance.Unpause();
     }

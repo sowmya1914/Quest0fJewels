@@ -190,6 +190,7 @@ namespace Gamekit2D
                     PlayerInput.Instance.Pause.GainControl();
                     m_InPause = true;
                     Time.timeScale = 0;
+                    Cursor.visible = true;
                     UnityEngine.SceneManagement.SceneManager.LoadSceneAsync("UIMenus", UnityEngine.SceneManagement.LoadSceneMode.Additive);
                 }
                 else
@@ -220,6 +221,7 @@ namespace Gamekit2D
         protected IEnumerator UnpauseCoroutine()
         {
             Time.timeScale = 1;
+            Cursor.visible = false;
             UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync("UIMenus");
             PlayerInput.Instance.GainControl();
             //we have to wait for a fixed update so the pause button state change, otherwise we can get in case were the update
