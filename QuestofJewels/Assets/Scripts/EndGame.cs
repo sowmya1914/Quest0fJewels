@@ -14,6 +14,7 @@ public class EndGame : MonoBehaviour
     public void gameEnd()
     {
         Timer.Instance.setPause(true);
+        Cursor.visible = true;
         IEnumerator enumerator = playText();
         StartCoroutine(enumerator);
     }

@@ -20621,7 +20621,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4714846280123948, guid: 891c73d4652890840a206efd70e761ae, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4714846280123948, guid: 891c73d4652890840a206efd70e761ae, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114412267516478162, guid: 891c73d4652890840a206efd70e761ae,
         type: 3}
@@ -20721,7 +20725,7 @@ PrefabInstance:
     - target: {fileID: 114412267516478162, guid: 891c73d4652890840a206efd70e761ae,
         type: 3}
       propertyPath: startingHealth
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 212116918692032108, guid: 891c73d4652890840a206efd70e761ae,
         type: 3}
@@ -20732,6 +20736,11 @@ PrefabInstance:
         type: 3}
       propertyPath: spriteFaceLeft
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114719609329687142, guid: 891c73d4652890840a206efd70e761ae,
+        type: 3}
+      propertyPath: speed
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 891c73d4652890840a206efd70e761ae, type: 3}

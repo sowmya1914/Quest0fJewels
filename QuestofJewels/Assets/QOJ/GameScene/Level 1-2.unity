@@ -79680,6 +79680,11 @@ PrefabInstance:
       propertyPath: OnReachDestination.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 114510199183654070, guid: f949db0cfd21cb34796d46f92ac4fb1a,
+        type: 3}
+      propertyPath: setCharacterFacing
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f949db0cfd21cb34796d46f92ac4fb1a, type: 3}
 --- !u!1 &2037078712
@@ -84721,12 +84726,12 @@ PrefabInstance:
     - target: {fileID: 3429213455761378598, guid: 65108bf973264b34b9dbc73e35da9eec,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -76.36
+      value: -96.55
       objectReference: {fileID: 0}
     - target: {fileID: 3429213455761378598, guid: 65108bf973264b34b9dbc73e35da9eec,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -62.75
+      value: -20.993
       objectReference: {fileID: 0}
     - target: {fileID: 3429213455761378598, guid: 65108bf973264b34b9dbc73e35da9eec,
         type: 3}
